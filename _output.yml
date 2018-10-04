@@ -1,0 +1,21 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">Statistics for GeoSpatial Data</a></li>
+      after: |
+        <li><a href="https://pages.github.com/" target="blank">Published with GitHub Pages</a></li>
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  includes:
+    in_header: latex/preamble.tex
+    before_body: latex/before_body.tex
+    after_body: latex/after_body.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  pandoc_args: ["--top-level-division=chapter", "--lua-filter=latex/sidebar.lua"]
+  keep_tex: yes
+  #highlight: NULL
+  #highlight_bw: yes
+bookdown::epub_book: default

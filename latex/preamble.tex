@@ -1,0 +1,35 @@
+\usepackage[UTF8, heading]{ctex}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+
+\usepackage[titles]{tocloft}
+\usepackage[lotdepth=2,lofdepth=2]{subfig}
+\usepackage[nottoc]{tocbibind} % Table of Contents, Bibliography, Index, etc
+\usepackage[scale=0.8]{sourcecodepro}
+\usepackage{makeidx}
+\makeindex
+
+\makeatletter
+\defaultfontfeatures[\ttfamily]{
+    Numbers   = \sourcecodepro@figurestyle ,
+    Scale     = \SourceCodePro@scale ,
+    Extension = .otf }
+\setmonofont[ 
+    UprightFont    = *-\sourcecodepro@regstyle ,
+    ItalicFont     = *-\sourcecodepro@regstyle It ,
+    BoldFont       = *-\sourcecodepro@boldstyle , 
+    BoldItalicFont = *-\sourcecodepro@boldstyle It ]{SourceCodePro}     
+\makeatother
+
+\frontmatter
