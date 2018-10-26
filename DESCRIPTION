@@ -17,3 +17,5 @@ Suggests:
 Remotes: 
   rstudio/rmarkdown,
   rstudio/bookdown
+URL: https://spatio-temporal.netlify.com/
+Maintainer: Xiangyun Huang <xiangyunfaith@outlook.com>
