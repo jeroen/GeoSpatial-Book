@@ -10,8 +10,6 @@ latex: false
 branches:
   only:
     - master
-    - release
-    - stable
     - develop
 
 pandoc_version: 2.3.1
@@ -28,8 +26,6 @@ repos:
 addons:
   apt:
     sources:
-      - sourceline: ppa:opencpu/imagemagick
-      - sourceline: ppa:ubuntugis/ubuntugis-unstable
       - ubuntu-toolchain-r-test
     packages:
       - ghostscript
@@ -39,10 +35,10 @@ addons:
       - libproj-dev 
       - libgeos-dev 
       - libgdal-dev      
-      - gcc-8 
-      - g++-8
+      - gcc-7
+      - g++-7
 env:
-  - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+  - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
 
 before_install:
   - mkdir ~/.R
