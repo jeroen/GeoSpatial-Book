@@ -55,5 +55,4 @@ script:
   - Rscript -e 'bookdown::render_book("index.Rmd")'
 
 after_success:
-  - make pdf
   - netlify deploy --prod --dir _book
