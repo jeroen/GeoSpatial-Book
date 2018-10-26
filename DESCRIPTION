@@ -1,0 +1,19 @@
+Package: GeoSpatial
+Type: Book
+Title: GeoSpatial Data Visualization, Analysis and Modeling in R.
+Version: 0.0.0.9000
+Depends: 
+    R (>= 3.5.0)
+Imports: 
+  bookdown,
+  colorspace (>= 1.4-0),
+  desc,
+  ggplot2,
+  rmarkdown,
+  rstan,
+  sf
+Suggests: 
+  svglite
+Remotes: 
+  rstudio/rmarkdown,
+  rstudio/bookdown

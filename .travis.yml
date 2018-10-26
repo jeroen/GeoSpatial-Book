@@ -1,0 +1,63 @@
+language: r
+r:
+  - release
+sudo: false
+cache:
+  packages: true
+  directories:
+    - $HOME/.npm
+latex: false
+branches:
+  only:
+    - master
+    - release
+    - stable
+    - develop
+
+pandoc_version: 2.3.1
+
+git:
+  depth: 5
+  submodules: false
+  lfs_skip_smudge: true
+  
+repos:
+  CRAN: https://cloud.r-project.org
+  RForge: https://r-forge.r-project.org
+
+addons:
+  apt:
+    sources:
+      - sourceline: ppa:opencpu/imagemagick
+      - sourceline: ppa:ubuntugis/ubuntugis-unstable
+      - ubuntu-toolchain-r-test
+    packages:
+      - ghostscript
+      - imagemagick
+      - optipng
+      - libudunits2-dev
+      - libproj-dev 
+      - libgeos-dev 
+      - libgdal-dev      
+      - gcc-8 
+      - g++-8
+env:
+  - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+
+before_install:
+  - mkdir ~/.R
+  - cp Makevars ~/.R
+  - npm install netlify-cli -g
+  - curl -fLo /tmp/tinytex.tar.gz https://travis-bin.yihui.name/tinytex.tar.gz
+  - tar xzf /tmp/tinytex.tar.gz -C /$HOME
+  - export PATH=/$HOME/.TinyTeX/bin/x86_64-linux:$PATH
+  - Rscript -e 'if(!require(tinytex)) install.packages("tinytex");tinytex::tlmgr_install(readLines("latex/TeXLive.pkgs"))'
+
+before_script:
+  - Rscript -e 'update.packages(lib.loc = .libPaths()[1], ask = FALSE)'
+script:
+  - Rscript -e 'bookdown::render_book("index.Rmd")'
+
+after_success:
+  - make pdf
+  - netlify deploy --prod --dir _book

@@ -2,7 +2,7 @@
 title: "空间数据分析与建模"
 subtitle: "GeoSpatial Data Visualization, Analysis and Modeling in R"
 author: "黄湘云"
-date: "2018年10月4日"
+date: "2018年10月26日"
 site: bookdown::bookdown_site
 documentclass: book
 lof: yes
@@ -11,7 +11,7 @@ fontsize: 11pt
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "GeoSpatial Data Visualization in R."
+description: "GeoSpatial Data Visualization with ggplot2 and Analysis with rstan in R."
 url: 'https\://bookdown.org/xiangyun/geospatial/'
 github-repo: XiangyunHuang/GeoSpatial-Book
 #cover-image: images/cover.png
@@ -47,8 +47,6 @@ To compile this example to PDF, you need XeLaTeX. You are recommended to install
 # xfun::session_info(packages = c(
 #   "ggplot2", "sf"
 # ))
-sessioninfo::session_info(pkgs = c(
-  "ggplot2", "sf"
-))
+devtools::session_info('rstan')
 ```
 
