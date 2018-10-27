@@ -54,5 +54,11 @@ before_script:
 script:
   - Rscript -e 'bookdown::render_book("index.Rmd")'
 
+deploy:
+  provider: script
+  script: netlify deploy --prod --dir _book
+  skip_cleanup: true
+
 after_success:
-  - netlify deploy --prod --dir _book
+  - make pdf
+  #- netlify deploy --prod --dir _book
