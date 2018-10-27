@@ -5,3 +5,47 @@
 # 软件工具 {#softwares}
 
 Pandoc 和 Markdown
+
+# 概率编程 {#probabilistic-programming-language}
+
+设置参数
+
+```{r stan-setup,message=FALSE,eval=FALSE}
+Sys.setenv(USE_CXX14 = 1)
+library("rstan") # observe startup messages
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores()/2)
+```
+
+准备数据
+
+```{r load-data}
+schools_dat <- list(J = 8, 
+                    y = c(28,  8, -3,  7, -1,  1, 18, 12),
+                    sigma = c(15, 10, 16, 11,  9, 11, 10, 18))
+```
+
+编译运行模型
+
+```{r compile-run,message=FALSE,warning=FALSE}
+fit <- stan(file = 'code/stan/8schools.stan', data = schools_dat, 
+            iter = 1000, chains = 4)
+```
+
+输出结果
+
+```{r stan-output}
+print(fit,digits = 1)
+```
+
+诊断收敛性
+
+```{r report}
+check_hmc_diagnostics(fit)
+```
+
+```{r check-model,fig.cap="后验分布的散点矩阵图",out.width="35%",fig.show='hold',fig.asp=1,fig.width=4.5,fig.subcap=c("原始值","取对数")}
+pairs(fit, pars = c("mu", "tau", "lp__"))
+pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
+```
+
