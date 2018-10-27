@@ -28,8 +28,12 @@ schools_dat <- list(J = 8,
 编译运行模型
 
 ```{r compile-run,message=FALSE,warning=FALSE}
-fit <- stan(file = 'code/stan/8schools.stan', data = schools_dat, 
-            iter = 1000, chains = 4)
+system.time({
+  fit <- stan(
+    file = "code/stan/8schools.stan", data = schools_dat,
+    iter = 1000, chains = 4
+  )
+}, gcFirst = TRUE)
 ```
 
 输出结果
