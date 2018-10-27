@@ -37,7 +37,6 @@ addons:
       - libgdal-dev      
       - gcc-7
       - g++-7
-      - npm
 
 env:
   - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
@@ -45,11 +44,6 @@ env:
 before_install:
   - mkdir ~/.R
   - cp Makevars ~/.R
-  - sudo npm cache clean -f
-  - sudo npm install n -g
-  - sudo n stable
-  - node --version
-  - npm --version
   - npm install netlify-cli -g
  # - curl -fLo /tmp/tinytex.tar.gz https://travis-bin.yihui.name/tinytex.tar.gz
  # - tar xzf /tmp/tinytex.tar.gz -C /$HOME
