@@ -45,9 +45,9 @@ env:
 before_install:
   - mkdir ~/.R
   - cp Makevars ~/.R
-  - npm cache clean -f
-  - npm install n -g
-  - n stable
+  - sudo npm cache clean -f
+  - sudo npm install n -g
+  - sudo n stable
   - node --version
   - npm --version
   - npm install netlify-cli -g
