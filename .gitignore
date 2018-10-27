@@ -45,3 +45,5 @@ packages.bib
 *.log
 *.rds
 *.tar.gz
+temp.Rmd
+book/
