@@ -8,6 +8,7 @@ Imports:
   bookdown,
   colorspace (>= 1.4-0),
   desc,
+  dplyr,
   ggplot2,
   rmarkdown,
   rstan,
