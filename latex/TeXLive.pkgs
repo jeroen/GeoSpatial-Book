@@ -1,7 +1,6 @@
 colortbl
 ctex
 dvipng
-dvips
 dvisvgm
 environ
 fancyhdr
@@ -26,15 +25,16 @@ relsize
 rsfs
 setspace
 soul
+sourcecodepro
 standalone
 subfig
 symbol
 tabu
-tex
 tex4ht
 threeparttable
 threeparttablex
 titlesec
+tocbibind
 tocloft
 trimspaces
 ttfutils
