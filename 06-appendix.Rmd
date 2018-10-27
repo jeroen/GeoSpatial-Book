@@ -8,6 +8,12 @@ Pandoc 和 Markdown
 
 # 概率编程 {#probabilistic-programming-language}
 
+概率编程语言，图模型，贝叶斯推断，马尔科夫链蒙特卡罗，汉密尔顿蒙特卡罗，随机模拟，抽样分布，贝叶斯定理，先验后验
+
+## Stan 简介 {#intro-stan}
+
+何为 Stan [@Stan2018] RStan [@R-rstan] 是 Stan 的 R 语言接口
+
 设置参数
 
 ```{r stan-setup,message=FALSE,eval=FALSE}

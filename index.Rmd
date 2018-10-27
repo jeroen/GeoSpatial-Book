@@ -74,6 +74,10 @@ options(
   )
 )
 ```
+```{r engine='bash', eval=!is_on_travis & .Platform$OS.type == "unix"}
+# 只在本地 CentOS 系统上运行
+source /opt/rh/devtoolset-7/enable
+```
 
 \mainmatter
 

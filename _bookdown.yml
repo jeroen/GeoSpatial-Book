@@ -17,5 +17,5 @@ language:
 rmd_files: 
   - "index.Rmd"
 
-  - "06-references.Rmd"
-  - "07-appendix.Rmd"
+  - "06-appendix.Rmd"
+  - "07-references.Rmd"
