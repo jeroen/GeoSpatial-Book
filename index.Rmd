@@ -74,7 +74,7 @@ options(
   )
 )
 ```
-```{r engine='bash', eval=!is_on_travis & .Platform$OS.type == "unix"}
+```{r engine='bash', eval=!is_on_travis & .Platform$OS.type == "unix",include=FALSE}
 # 只在本地 CentOS 系统上运行
 source /opt/rh/devtoolset-7/enable
 ```
@@ -98,6 +98,12 @@ install.packages("bookdown")
 Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
 
 To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+
+# 介绍 {#introduction}
+
+## 约定 {#colophon}
+
+这本书在 RStudio 里用 bookdown 写作。网站托管在 Netlify 上，Github 的每次提交都会触发 Travis-ci 重新编译源码书稿，编译成功后，自动推送到 Netlify 上，网站会随之更新。书籍的源代码存放在 Github 上。书中显示代码的字体是 [Source Code Pro](https://github.com/silkeh/latex-sourcecodepro) 
 
 ```{r}
 devtools::session_info('rstan')
