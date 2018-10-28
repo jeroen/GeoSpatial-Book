@@ -44,8 +44,6 @@ env:
 before_install:
   - mkdir ~/.R
   - cp Makevars ~/.R
-  - wget -qO- https://deb.nodesource.com/setup_8.x | sudo -E bash -
-  - sudo apt-get install -y nodejs npm
   - npm install netlify-cli -g
  # - curl -fLo /tmp/tinytex.tar.gz https://travis-bin.yihui.name/tinytex.tar.gz
  # - tar xzf /tmp/tinytex.tar.gz -C /$HOME
