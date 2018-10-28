@@ -130,6 +130,6 @@ ruler()
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(),'rstan'
-), 'packages.bib')
+), 'latex/packages.bib')
 ```
 
