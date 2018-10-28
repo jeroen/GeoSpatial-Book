@@ -8,7 +8,7 @@ documentclass: book
 lof: yes
 lot: yes
 fontsize: 11pt
-bibliography: [book.bib, packages.bib]
+bibliography: [latex/book.bib, latex/packages.bib, latex/articles.bib]
 biblio-style: apalike
 link-citations: yes
 description: "GeoSpatial Data Visualization with ggplot2 and Analysis with rstan in R."
