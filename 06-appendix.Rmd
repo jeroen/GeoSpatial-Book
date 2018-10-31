@@ -86,5 +86,48 @@ pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
 空间广义线性混合效应模型 <https://github.com/XiangyunHuang/notesdown/issues/67>
 
 
+## 空间线性混合效应模型
+
+以海拔数据为例，预测海拔高度，线性预测，克里金插值
+
+```{r elevation-buble,echo=FALSE,fig.cap="空间数据可视化：以海拔数据为例",fig.subcap=c("气泡图","散点图"),small.mar=TRUE,out.width="35%",fig.show='hold',fig.asp=1,fig.width=4.5}
+dat <- read.table(file = "data/NOTREDAM.TXT", header = T)
+with(dat, {
+  plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
+  points(North.South ~ East.West,
+    pch = 21,
+    bg = gray(1, alpha = 0.5), cex = (Elevation - 600) / 90
+  )
+})
+cols <- rev(gray.colors(4)) # terrain.colors(4)
+elev2col <- function(x) {
+  if (x <= 1) {
+    col <- cols[1]
+  } else if (x <= 2) {
+    col <- cols[2]
+  } else if (x <= 3) {
+    col <- cols[3]
+  } else if (x <= 4) 
+    col <- cols[4]
+}
+
+dat <- transform(dat, elev2col = sapply((Elevation - 600) / 90, elev2col, USE.NAMES = TRUE))
+
+with(dat, {
+  plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
+  for (i in seq(dim(dat)[1])) {
+    points(dat[i, c(1, 2)], pch = 21, bg = dat[i, 4], cex = 2)
+  }
+})
+
+with(dat, {
+  plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
+  for (i in seq(dim(dat)[1])) {
+    points(dat[i, c(1, 2)], pch = 21, bg = dat[i, 4], cex = 2)
+  }
+})
+```
+
+plot 和 points 函数的 col 参数不支持向量化运算，即若传入一组向量，只会使用向量的第一个元素，所以绘制散点图\@ref(fig:elevation-buble)(b)时将海拔高度从低至高对应成由白至黑的四个灰度。比较来看，采用气泡图可能更合适些。当然也要注意气泡图采用的比例关系 [@Tanimura2006]，特别是在地图上绘制大量气泡时，要处理气泡之间可能存在的重叠和低对比度问题。
 
 
