@@ -48,6 +48,11 @@ system.time({
 print(fit,digits = 1)
 ```
 
+参数的后验均值估计 (means) 蒙特卡罗标准误差 (se\_mean) 后验均值估计的标准偏差 (sd) 参数后验分布的五个分位点 $\hat{R}$ (the potential scale reduction derived from all chains after splitting each chain in half and treating the halves as chains) 和有效样本量 (n\_eff)
+
+
+[结合实际数据详细解释这些个统计量的含义]{.todo}
+
 诊断收敛性
 
 ```{r report}
@@ -58,4 +63,28 @@ check_hmc_diagnostics(fit)
 pairs(fit, pars = c("mu", "tau", "lp__"))
 pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
 ```
+
+[NUTS 采样器和 HMC 算法的参数设置]{.todo}
+
+[诊断 Stan 的拟合结果]{.todo}
+
+检测收敛性的一系列指标的图示 shinystan
+
+[Stan 内置的优化器 optimizing]{.todo}
+
+
+
+
+---
+
+高斯过程，特别是空间广义线性混合效应模型
+
+变分推断
+
+市面上 WinBUGS/OpenBUGS/JAGS/INLA/MultiBUGS/BayesX/nimble 比较，一般的广义线性混合效应模型
+
+空间广义线性混合效应模型 <https://github.com/XiangyunHuang/notesdown/issues/67>
+
+
+
 
