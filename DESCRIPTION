@@ -19,5 +19,8 @@ Suggests:
 Remotes: 
   rstudio/rmarkdown,
   rstudio/bookdown
-URL: https://r-spatial.netlify.com
+Enhances: sp  
+URL: https://r-spatial.netlify.com, https://bookdown.org/xiangyun/GeoSpatial/
+BugReports: https://github.com/XiangyunHuang/geospatial-book/issues
 Maintainer: Xiangyun Huang <xiangyunfaith@outlook.com>
+License: MIT | file LICENSE
