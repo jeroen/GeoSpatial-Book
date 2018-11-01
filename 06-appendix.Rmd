@@ -86,9 +86,21 @@ pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
 空间广义线性混合效应模型 <https://github.com/XiangyunHuang/notesdown/issues/67>
 
 
-## 空间线性混合效应模型
+## 空间高斯过程回归模型 {#spatial-gaussian-processes-regression-model}
 
-以海拔数据为例，预测海拔高度，线性预测，克里金插值
+空间高斯过程：首先是一个高斯过程，空间用以描述数据的背景，观测数据与空间位置有关系，可以的一维、二维、三维等，相应的高斯过程就是一维、二维、三维的。
+
+空间线性混合效应模型：是一个线性模型，认为随机效应来自空间高斯过程，混合效应指的是固定效应和随机效应，其中固定效应可以直接观察到，而随机效应不能直接观察到。
+
+空间高斯过程回归：认为数据由空间高斯过程产生
+
+以 `geodata` 类的形式打包在 geoR 包里
+
+elevation 数据集最初来自 John C. Davis （1973年）的书籍 [@Davis_2002_Statistics]，后来 J. J. Warnes 和 B. D. Ripley （1987年）以该数据集为例 指出空间高斯过程的协方差函数的似然估计中存在的问题 [@Warnes_1987_Problems]
+
+地质统计数据是什么？地质统计包含哪些内容，研究对象是什么，研究哪些问题？广泛采用的克里金插值是什么？它与空间线性混合效应模型有什么关系？它与一般线性模型又有什么关系？
+
+以海拔数据为例，预测海拔高度，线性预测与克里金插值的关系
 
 ```{r elevation-buble,echo=FALSE,fig.cap="空间数据可视化：以海拔数据为例",fig.subcap=c("气泡图","散点图"),small.mar=TRUE,out.width="35%",fig.show='hold',fig.asp=1,fig.width=4.5}
 dat <- read.table(file = "data/NOTREDAM.TXT", header = T)
@@ -128,6 +140,6 @@ with(dat, {
 })
 ```
 
-plot 和 points 函数的 col 参数不支持向量化运算，即若传入一组向量，只会使用向量的第一个元素，所以绘制散点图\@ref(fig:elevation-buble)(b)时将海拔高度从低至高对应成由白至黑的四个灰度。比较来看，采用气泡图可能更合适些。当然也要注意气泡图采用的比例关系 [@Tanimura2006]，特别是在地图上绘制大量气泡时，要处理气泡之间可能存在的重叠和低对比度问题。
+plot 和 points 函数的 col 参数不支持向量化运算，即若传入一组向量，只会使用向量的第一个元素，所以绘制散点图\@ref(fig:elevation-buble)(b)时将海拔高度从低至高对应成由白至黑的四个灰度。比较来看，采用气泡图可能更合适些。当然也要注意气泡图采用的比例关系 [@Tanimura_2006_Proportional]，特别是在地图上绘制大量气泡时，要处理气泡之间可能存在的重叠和低对比度问题。
 
 

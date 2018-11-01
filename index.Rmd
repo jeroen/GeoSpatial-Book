@@ -9,7 +9,7 @@ lof: yes
 lot: yes
 fontsize: 11pt
 bibliography: [latex/book.bib, latex/packages.bib, latex/articles.bib]
-biblio-style: apalike
+#biblio-style: unsrt
 link-citations: yes
 description: "GeoSpatial Data Visualization with ggplot2 and Analysis with rstan in R."
 url: 'https\://bookdown.org/xiangyun/geospatial/'
