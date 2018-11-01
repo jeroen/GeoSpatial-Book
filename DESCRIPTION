@@ -14,7 +14,8 @@ Imports:
   rstan,
   sf
 Suggests: 
-  svglite
+  svglite,
+  geoR
 Remotes: 
   rstudio/rmarkdown,
   rstudio/bookdown
