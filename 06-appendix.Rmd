@@ -90,9 +90,9 @@ pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
 
 空间高斯过程回归：认为数据由空间高斯过程产生
 
-以 `geodata` 类的形式打包在 geoR 包里
 
-elevation 数据集最初来自 John C. Davis （1973年）的书籍 [@Davis_2002_Statistics]，后来 J. J. Warnes 和 B. D. Ripley （1987年）以该数据集为例 指出空间高斯过程的协方差函数的似然估计中存在的问题 [@Warnes_1987_Problems]
+
+elevation 数据集最初来自 John C. Davis （1973年）的书籍 [@Davis_2002_Statistics]，后来 J. J. Warnes 和 B. D. Ripley （1987年）以该数据集为例指出空间高斯过程的协方差函数的似然估计中存在的问题 [@Warnes_1987_Problems]，Paulo J. Ribeiro Jr 和 Peter J. Diggle （2001年）将该数据集打包成自定义的 `geodata` 数据类型，放在 geoR 包里 [@Ribeiro_2001_geoR]，并在他俩合著的书《Model-based Geostatistics》中多次出现 [@Diggle_2007_Model]。
 
 地质统计数据是什么？地质统计包含哪些内容，研究对象是什么，研究哪些问题？广泛采用的克里金插值是什么？它与空间线性混合效应模型有什么关系？它与一般线性模型又有什么关系？
 
@@ -135,7 +135,18 @@ with(dat, {
   }
 })
 ```
+```{r include=FALSE,eval=FALSE}
+library(geoR)
+points(elevation,
+  xlab = "East-West", ylab = "North-South",
+  pt.divide = seq(from = 690, to = 960, length.out = 6), # 6个断点划分为5个区间
+  col.seq = gray.colors(5, start = 0.9, end = 0.3), # 填充色 颜色越深值越大
+  cex.min = 2, cex.max = 2,
+  dig.leg = 2
+)
+```
 
-plot 和 points 函数的 col 参数不支持向量化运算，即若传入一组向量，只会使用向量的第一个元素，所以绘制散点图\@ref(fig:elevation-buble)(b)时将海拔高度从低至高对应成由白至黑的四个灰度。比较来看，采用气泡图可能更合适些。当然也要注意气泡图采用的比例关系 [@Tanimura_2006_Proportional]，特别是在地图上绘制大量气泡时，要处理气泡之间可能存在的重叠和低对比度问题。
+`plot` 和 `points` 函数的 `col` 参数不支持向量化运算，即若传入一组向量，只会使用向量的第一个元素，所以绘制散点图\@ref(fig:elevation-buble)(b)时将海拔高度从低至高对应成由白至黑的四个灰度。geoR 包提供了 `points.geodata` 函数，它的 `col.seq` 参数支持向量输入[^points]。比较来看，采用气泡图可能更合适些。当然也要注意气泡图采用的比例关系 [@Tanimura_2006_Proportional]，特别是在地图上绘制大量气泡时，要处理气泡之间可能存在的重叠和低对比度问题。
 
 
+[^points]: `points`是一个泛型函数，可用`methods(points)`查看所有实现方法，请读者尝试用 geoR 包提供的`points`函数绘制图\@ref(fig:elevation-buble)
