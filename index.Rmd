@@ -102,11 +102,16 @@ To compile this example to PDF, you need XeLaTeX. You are recommended to install
 # 介绍 {#introduction}
 
 ## 约定 {#colophon}
+\index{Pandoc}
 
-这本书在 RStudio 里用 bookdown 写作。网站托管在 Netlify 上，Github 的每次提交都会触发 Travis-ci 重新编译源码书稿，编译成功后，自动推送到 Netlify 上，网站会随之更新。书籍的源代码存放在 Github 上。书中显示代码的字体是 [Source Code Pro](https://github.com/silkeh/latex-sourcecodepro) 
+这本书在 RStudio 里用 bookdown 写作。网站托管在 Netlify 上，Github 的每次提交都会触发 Travis CI 重新编译源码书稿，编译成功后，自动推送到 Netlify 上，网站会随之更新。书籍的源代码存放在 Github 上。书中显示代码的字体是 [Source Code Pro](https://github.com/silkeh/latex-sourcecodepro) 
 
-```{r}
-devtools::session_info('rstan')
+编译书籍的 R Markdown 源文件需要如下版本的 R 软件、扩展包和文档转化器 Pandoc。
+
+```{r session-info}
+xfun::session_info(packages = c(
+  "dplyr", "rstan", "sf", "bookdown", "rmarkdown"
+))
 ```
 
 ```{r, include = FALSE}
