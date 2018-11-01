@@ -18,5 +18,5 @@ Suggests:
 Remotes: 
   rstudio/rmarkdown,
   rstudio/bookdown
-URL: https://spatial-stats.netlify.com
+URL: https://r-spatial.netlify.com
 Maintainer: Xiangyun Huang <xiangyunfaith@outlook.com>
