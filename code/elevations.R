@@ -51,3 +51,37 @@ brazil <- rgdal::readOGR(system.file("extra", "10m-brazil.shp", package = "RGrap
 
 spplot(brazil, "Regions", col.regions = gray(5:1 / 6))
 
+## 模拟泊松对数线性模型 SGLMM
+library(geoR)
+
+set.seed(371)
+cp <- expand.grid(seq(0, 1, l = 10), seq(0, 1, l = 10))
+s <- grf(grid = cp, cov.pars = c(2, 0.2), cov.model = "mat", kappa = 1.5)
+image(s, col = gray(seq(1, 0.2, l = 21)))
+lambda <- exp(0.5 + s$data)
+y <- rpois(length(s$data), lambda = lambda)
+text(cp[, 1], cp[, 2], y, cex = 1.5)
+
+# 模拟带块金效应 tau 的模型
+lambda <- exp(s$data + tau * rnorm(length(s$data)))
+
+# 模拟二项logit线性模型 SGLMM
+# mu = 0
+set.seed(34)
+locs <- seq(0, 1, l = 401)
+s <- grf(grid = cbind(locs, 1), cov.pars = c(5, 0.1),
+           cov.model = "matern", kappa = 1.5)
+p <- exp(s$data)/(1 + exp(s$data))
+ind <- seq(1, 401, by = 8)
+y <- rbinom(p[ind], size = 1, prob = p)
+plot(locs[ind], y, xlab = "locations", ylab = "data")
+lines(locs, p)
+
+# mu = 2
+set.seed(23)
+s <- grf(60, cov.pars = c(5, 0.25))
+p <- exp(2 + s$data)/(1 + exp(2 + s$data))
+y <- rbinom(length(p), size = 5, prob = p)
+points(s)
+text(s$coords, label = y, pos = 3, offset = 0.3)
+
