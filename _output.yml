@@ -17,6 +17,7 @@ bookdown::pdf_book:
   citation_package: natbib
   pandoc_args: ["--top-level-division=chapter", "--lua-filter=latex/sidebar.lua"]
   keep_tex: yes
+  #template: latex/default.latex
   #highlight: NULL
   #highlight_bw: yes
 bookdown::epub_book: default

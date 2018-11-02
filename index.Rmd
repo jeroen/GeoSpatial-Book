@@ -3,13 +3,23 @@ title: "空间数据分析与建模"
 subtitle: "GeoSpatial Data Visualization, Analysis and Modeling in R"
 author: "黄湘云"
 date: "2018年10月26日"
+#institute: "cumtb"
 site: bookdown::bookdown_site
 documentclass: book
+papersize: a4
+linestretch: 1.25
 lof: yes
 lot: yes
-fontsize: 11pt
+#tables: yes
+fontsize: 12pt
+#pointsize: 10p
+#lineheight: 12p
+indent: 40pt
+#mathspec: yes
+#verbatim-in-note: yes
+#thanks: "bookdown"
 bibliography: [latex/book.bib, latex/packages.bib, latex/articles.bib]
-#biblio-style: unsrt
+#biblio-style: unsrt # plainnat
 link-citations: yes
 description: "GeoSpatial Data Visualization with ggplot2 and Analysis with rstan in R."
 url: 'https\://bookdown.org/xiangyun/geospatial/'
@@ -42,6 +52,7 @@ knitr::opts_chunk$set(
   out.width = "70%",
   fig.align = "center",
   fig.width = 6,
+  width = 69,
   fig.asp = 0.618
 )
 
@@ -63,6 +74,8 @@ options(
   stringsAsFactors = FALSE,
   repos = "https://mirrors.tuna.tsinghua.edu.cn/CRAN/",
   knitr.graphics.auto_pdf = FALSE,
+  width = 69,
+  str = strOptions(strict.width = "cut"),
   tikzDefaultEngine = "xetex",
   tikzXelatexPackages = c(
     getOption("tikzXelatexPackages"),
