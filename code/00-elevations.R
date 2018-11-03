@@ -1,4 +1,4 @@
-
+# 数据集描述在第五章空间分析 spatial analysis 图 5-66   University of Notre Dame 诺特丹大学 USA 
 dat <- read.table(file = "data/NOTREDAM.TXT", header = T)
 
 with(dat, {

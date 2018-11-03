@@ -6,6 +6,9 @@
 
 概率编程语言，图模型，贝叶斯推断，马尔科夫链蒙特卡罗，汉密尔顿蒙特卡罗，随机模拟，抽样分布，贝叶斯定理，先验后验
 
+介绍 Stan 然后以空间广义线性混合效应模型为例，比较 geoRglm geoCount INLA 和 Stan 在高斯、二项、泊松三个真实数据集上的表现
+瑞士降雨量数据，冈比亚儿童疟疾，喀麦隆河盲病，朗格拉普岛核污染
+
 ## Stan 简介 {#intro-stan}
 
 何为 Stan [@Stan_2018_Bayesian] RStan [@R-rstan] 是 Stan 的 R 语言接口
@@ -110,8 +113,6 @@ pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
 [Stan 内置的优化器 optimizing]{.todo}
 
 
-
-
 ---
 
 高斯过程，特别是空间广义线性混合效应模型
@@ -122,6 +123,7 @@ pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
 
 空间广义线性混合效应模型 <https://github.com/XiangyunHuang/notesdown/issues/67>
 
+应用 http://barry.rowlingson.com/research.html
 
 ## 空间高斯过程回归模型 {#spatial-gaussian-processes-regression-model}
 

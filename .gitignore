@@ -50,3 +50,5 @@ book/
 latex/not-refer.bib
 latex/default.latex
 03-statistical-computing.Rmd
+code/GeostatisticalCountData.R
+code/SwissRainLoaloa.R
