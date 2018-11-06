@@ -1,4 +1,4 @@
-# 统计计算基础 {#fundations-of-statistical-computing}
+# 广义线性模型 {#Generalized-Linear-Models}
 
 
 ## 极大似然估计
@@ -12,5 +12,5 @@
 二项混合泊松分布
 
 
-
+https://bookdown.org/rdpeng/advstatcomp/
 

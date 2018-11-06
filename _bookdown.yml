@@ -17,7 +17,7 @@ language:
 rmd_files: 
   - "index.Rmd"
 
-  - "06-appendix.Rmd"
-  - "07-references.Rmd"
+  - "06-Appendix.Rmd"
+  - "07-References.Rmd"
 
 edit: https://github.com/XiangyunHuang/GeoSpatial-Book/edit/master/%s
