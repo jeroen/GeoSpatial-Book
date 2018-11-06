@@ -9,6 +9,10 @@
 介绍 Stan 然后以空间广义线性混合效应模型为例，比较 geoRglm geoCount INLA 和 Stan 在高斯、二项、泊松三个真实数据集上的表现
 瑞士降雨量数据，冈比亚儿童疟疾，喀麦隆河盲病，朗格拉普岛核污染
 
+Statistical Rethinking with brms, ggplot2, and the tidyverse
+
+https://bookdown.org/ajkurz/Statistical_Rethinking_recoded/
+
 ## Stan 简介 {#intro-stan}
 
 何为 Stan [@Stan_2018_Bayesian] RStan [@R-rstan] 是 Stan 的 R 语言接口
