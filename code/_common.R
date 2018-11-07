@@ -42,7 +42,11 @@ options(
   citation.bibtex.max = 999,
   bitmapType = "cairo",
   stringsAsFactors = FALSE,
-  repos = "https://mirrors.tuna.tsinghua.edu.cn/CRAN/",
+  repos = c(
+    CRAN = "https://cloud.r-project.org",
+    RForge = "https://r-forge.r-project.org",
+    inla = "https://inla.r-inla-download.org/R/stable"
+  ),
   knitr.graphics.auto_pdf = FALSE,
   width = 69,
   str = strOptions(strict.width = "cut"),
