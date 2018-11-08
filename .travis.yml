@@ -25,6 +25,10 @@ repos:
   RForge: https://r-forge.r-project.org
   inla: https://inla.r-inla-download.org/R/stable
 
+#bioc_packages:
+#  - graph
+#  - Rgraphviz
+
 addons:
   apt:
     sources:
