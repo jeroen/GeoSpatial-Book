@@ -23,6 +23,7 @@ git:
 repos:
   CRAN: https://cloud.r-project.org
   RForge: https://r-forge.r-project.org
+  inla: https://inla.r-inla-download.org/R/stable
 
 addons:
   apt:
