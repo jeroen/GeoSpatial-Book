@@ -195,3 +195,15 @@ points(elevation,
 
 
 [^points]: `points`是一个泛型函数，可用`methods(points)`查看所有实现方法，请读者尝试用 geoR 包提供的`points`函数绘制图\@ref(fig:elevation-buble)
+
+# 软件工具 {#softwares-tools}
+
+## 控制台信息 {#rsession-info}
+
+编译书籍的 R Markdown 源文件需要如下版本的 R 软件、扩展包和文档转化器 Pandoc。
+
+```{r session-info}
+xfun::session_info(packages = c(
+  "dplyr", "rstan", "sf", "bookdown", "rmarkdown"
+))
+```
