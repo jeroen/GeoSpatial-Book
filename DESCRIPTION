@@ -14,7 +14,7 @@ Imports:
   INLA (>= 18.7.12),
   rmarkdown,
   rstan (>= 2.18.1),
-  sf (0.7.1)
+  sf (>= 0.7.1)
 Suggests: 
   svglite
 Remotes: 
