@@ -3,7 +3,7 @@ r:
   - release
   - devel
 
-#dist: xenial
+dist: xenial
 
 sudo: true # required by rstan
 
