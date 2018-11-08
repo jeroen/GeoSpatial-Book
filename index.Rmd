@@ -63,23 +63,6 @@ To compile this example to PDF, you need XeLaTeX. You are recommended to install
 
 这本书在 RStudio 里用 bookdown 写作。网站托管在 Netlify 上，Github 的每次提交都会触发 Travis CI 重新编译源码书稿，编译成功后，自动推送到 Netlify 上，网站会随之更新。书籍的源代码存放在 Github 上。书中显示代码的字体是 [Source Code Pro](https://github.com/silkeh/latex-sourcecodepro) 
 
-```{r, include = FALSE}
-ruler <- function(width = getOption("width")) {
-  x <- seq_len(width)
-  y <- dplyr::case_when(
-    x %% 10 == 0 ~ as.character((x %/% 10) %% 10),
-    x %% 5 == 0  ~ "+",
-    TRUE         ~ "-"
-  )
-  cat(y, "\n", sep = "")
-  cat(x %% 10, "\n", sep = "")
-}
-```
-
-```{r}
-ruler()
-```
-
 ```{r include=FALSE,cache=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
