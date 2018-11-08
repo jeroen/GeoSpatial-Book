@@ -42,6 +42,7 @@ options(
   citation.bibtex.max = 999,
   bitmapType = "cairo",
   stringsAsFactors = FALSE,
+  BioC_mirror = "https://mirrors.tuna.tsinghua.edu.cn/bioconductor",
   repos = c(
     CRAN = if(is_on_travis) "https://cloud.r-project.org" else "https://mirrors.tuna.tsinghua.edu.cn/CRAN/",
     RForge = "https://r-forge.r-project.org",
