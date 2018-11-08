@@ -43,7 +43,7 @@ options(
   bitmapType = "cairo",
   stringsAsFactors = FALSE,
   repos = c(
-    CRAN = "https://mirrors.tuna.tsinghua.edu.cn/CRAN/",
+    CRAN = if(is_on_travis) "https://cloud.r-project.org" else "https://mirrors.tuna.tsinghua.edu.cn/CRAN/",
     RForge = "https://r-forge.r-project.org",
     inla = "https://inla.r-inla-download.org/R/stable"
   ),
