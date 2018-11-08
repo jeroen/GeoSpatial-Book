@@ -44,11 +44,13 @@ addons:
       - ghostscript
       - imagemagick
       - optipng
+      - librtmp-dev
+      #- librtmp1
       - libgit2-dev
       - libudunits2-dev
-      - libproj-dev 
-      - libgeos-dev 
-      - libgdal-dev  
+      - libproj-dev
+      - libgeos-dev
+      - libgdal-dev 
      #- gcc-7
      #- g++-7
 
@@ -58,12 +60,14 @@ addons:
 before_install:
   - mkdir ~/.R
   - cp Makevars ~/.R
+  - curl --help
   - wget https://github.com/jgm/pandoc/releases/download/2.4/pandoc-2.4-1-amd64.deb
   - sudo dpkg -i pandoc-2.4-1-amd64.deb
  # - nvm install 8
  # - nvm use 8
   - npm install netlify-cli -g
-  - curl -fLo /tmp/tinytex.tar.gz https://travis-bin.yihui.name/tinytex.tar.gz
+  - wget  https://travis-bin.yihui.name/tinytex.tar.gz /tmp/tinytex.tar.gz
+ # - curl -fLo /tmp/tinytex.tar.gz https://travis-bin.yihui.name/tinytex.tar.gz
   - tar xzf /tmp/tinytex.tar.gz -C /$HOME
   - export PATH=/$HOME/.TinyTeX/bin/x86_64-linux:$PATH
   - Rscript -e 'if(!require(tinytex)) install.packages("tinytex");tinytex::tlmgr_install(readLines("latex/TeXLive.pkgs"))'
