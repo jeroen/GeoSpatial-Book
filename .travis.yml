@@ -2,12 +2,18 @@ language: r
 r:
   - release
   - devel
-sudo: true
+
+#dist: xenial
+
+sudo: true # required by rstan
+
 cache:
   packages: true
   directories:
     - $HOME/.npm
+
 latex: false
+
 branches:
   only:
     - master
@@ -61,9 +67,16 @@ before_install:
 
 before_script:
   - Rscript -e 'update.packages(lib.loc = .libPaths()[1], ask = FALSE)'
+
 script:
   - Rscript -e 'bookdown::render_book("index.Rmd")'
 
 after_success:
   - make pdf
-  - netlify deploy --prod --dir _book
+
+deploy:
+  provider: script
+  script: netlify deploy --prod --dir _book
+  skip_cleanup: true
+  on:
+    branch: master
