@@ -1,4 +1,4 @@
-FROM r-base
+FROM rocker/verse:latest
 MAINTAINER Xiangyun Huang xiangyunfaith@outlook.com
 
 RUN apt-get update \
@@ -6,17 +6,20 @@ RUN apt-get update \
         build-essential libssl-dev pandoc \
         libudunits2-dev libproj-dev libgeos-dev libgdal-dev
 
+RUN mkdir ~/.R \
+    && cp Makevars ~/.R \
+    && Rscript -e 'tinytex::tlmgr_install(readLines("latex/TeXLive.pkgs"))'
+
 RUN install2.r --error \
-    colorspace \
     desc \
-    dplyr \
     geoR \
-    ggplot2 \
-    knitr \
     leaflet \
-    bookdown \
     rstan \
     sf
+
+RUN install2.r --error \
+  --repos "https://inla.r-inla-download.org/R/stable" \
+  INLA 
 
 COPY . /home/docker/GeoSpatial-Book
 WORKDIR /home/docker/GeoSpatial-Book
