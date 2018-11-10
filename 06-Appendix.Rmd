@@ -152,33 +152,43 @@ with(dat, {
     bg = gray(1, alpha = 0.5), cex = (Elevation - 600) / 90
   )
 })
-cols <- rev(gray.colors(4)) # terrain.colors(4)
-elev2col <- function(x) {
-  if (x <= 1) {
-    col <- cols[1]
-  } else if (x <= 2) {
-    col <- cols[2]
-  } else if (x <= 3) {
-    col <- cols[3]
-  } else if (x <= 4) 
-    col <- cols[4]
-}
-
-dat <- transform(dat, elev2col = sapply((Elevation - 600) / 90, elev2col, USE.NAMES = TRUE))
 
 with(dat, {
   plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
-  for (i in seq(dim(dat)[1])) {
-    points(dat[i, c(1, 2)], pch = 21, bg = dat[i, 4], cex = 2)
-  }
+  points(North.South ~ East.West,
+    pch = 21,
+    bg = gray(1 - (Elevation - min(Elevation)) / (max(Elevation) - min(Elevation))),
+    cex = 2
+  )
 })
 
-with(dat, {
-  plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
-  for (i in seq(dim(dat)[1])) {
-    points(dat[i, c(1, 2)], pch = 21, bg = dat[i, 4], cex = 2)
-  }
-})
+# cols <- rev(gray.colors(4)) # terrain.colors(4)
+# elev2col <- function(x) {
+#   if (x <= 1) {
+#     col <- cols[1]
+#   } else if (x <= 2) {
+#     col <- cols[2]
+#   } else if (x <= 3) {
+#     col <- cols[3]
+#   } else if (x <= 4) 
+#     col <- cols[4]
+# }
+# 
+# dat <- transform(dat, elev2col = sapply((Elevation - 600) / 90, elev2col, USE.NAMES = TRUE))
+# 
+# with(dat, {
+#   plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
+#   for (i in seq(dim(dat)[1])) {
+#     points(dat[i, c(1, 2)], pch = 21, bg = dat[i, 4], cex = 2)
+#   }
+# })
+# 
+# with(dat, {
+#   plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
+#   for (i in seq(dim(dat)[1])) {
+#     points(dat[i, c(1, 2)], pch = 21, bg = dat[i, 4], cex = 2)
+#   }
+# })
 ```
 ```{r include=FALSE,eval=FALSE}
 library(geoR)
@@ -191,10 +201,12 @@ points(elevation,
 )
 ```
 
-`plot` 和 `points` 函数的 `col` 参数不支持向量化运算，即若传入一组向量，只会使用向量的第一个元素，所以绘制散点图\@ref(fig:elevation-buble)(b)时将海拔高度从低至高对应成由白至黑的四个灰度。geoR 包提供了 `points.geodata` 函数，它的 `col.seq` 参数支持传入向量[^points]。比较来看，采用气泡图可能更合适些。当然也要注意气泡图采用的比例关系，特别是在地图上绘制大量气泡时，要处理气泡之间可能存在的重叠和低对比度问题 [@Tanimura_2006_Proportional;@South_2013_Mapping]。
+`plot` 和 `points` 函数的 `col` 参数不支持向量化运算，即若传入一组向量，只会使用向量的第一个元素，所以绘制散点图\@ref(fig:elevation-buble)(b)时将海拔高度从低至高对应成由白至黑的四个灰度[^bg]。geoR 包提供了 `points.geodata` 函数，它的 `col.seq` 参数支持传入向量[^points]。比较来看，采用气泡图可能更合适些。当然也要注意气泡图采用的比例关系，特别是在地图上绘制大量气泡时，要处理气泡之间可能存在的重叠和低对比度问题 [@Tanimura_2006_Proportional;@South_2013_Mapping]。
 
 
 [^points]: `points`是一个泛型函数，可用`methods(points)`查看所有实现方法，请读者尝试用 geoR 包提供的`points`函数绘制图\@ref(fig:elevation-buble)
+
+[^bg]: 也可以在 `plot` 或 `points` 函数中使用 `bg` 参数设置气泡的背景色，这时必须指定 `pch` 为 21 至 25 之间的值。此外，读者也可尝试用 `symbols` 函数实现
 
 # 软件工具 {#softwares-tools}
 
