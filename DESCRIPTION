@@ -12,8 +12,10 @@ Imports:
   geoR,
   ggplot2 (>= 3.1.0),
   INLA (>= 18.7.12),
+  reticulate,
   rmarkdown,
   rstan (>= 2.18.1),
+  rstanarm,
   sf (>= 0.7.1)
 Suggests: 
   svglite
