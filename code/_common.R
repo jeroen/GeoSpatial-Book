@@ -8,7 +8,6 @@ library(rstan)
 Sys.setenv(USE_CXX14 = 1)
 is_on_travis = identical(Sys.getenv("TRAVIS"), "true")
 is_online = curl::has_internet()
-is_on_centos = !is_on_travis & .Platform$OS.type == "unix" & Sys.info()['nodename'] != 'ubuntu'
 
 options(mc.cores = if(is_on_travis) 4 else 2)
 rstan_options(auto_write = TRUE)
