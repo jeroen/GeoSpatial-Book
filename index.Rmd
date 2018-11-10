@@ -19,7 +19,7 @@ indent: 40pt
 #verbatim-in-note: yes
 #thanks: "bookdown"
 bibliography: [latex/book.bib, latex/packages.bib, latex/articles.bib]
-#biblio-style: unsrt # plainnat
+biblio-style: plainnat
 link-citations: yes
 description: "GeoSpatial Data Visualization with ggplot2 and Analysis with rstan in R."
 url: 'https\://bookdown.org/xiangyun/geospatial/'
