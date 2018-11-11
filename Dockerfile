@@ -26,13 +26,13 @@ RUN apt-get update \
     tk-dev \
     unixodbc-dev \
   && mkdir ~/.R \
-  && wget -P ~/.R https://raw.githubusercontent.com/XiangyunHuang/GeoSpatial-Book/master/Makevars
+  && wget -P ~/.R https://raw.githubusercontent.com/XiangyunHuang/GeoSpatial-Book/master/Makevars \
   && install2.r --error \
     desc \
     geoR \
     leaflet \
     rstan \
-    sf
+    sf \
   && install2.r --error \
     --repos "https://inla.r-inla-download.org/R/stable" \
     INLA 
