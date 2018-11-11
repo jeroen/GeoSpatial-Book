@@ -3,10 +3,6 @@ MAINTAINER Xiangyun Huang xiangyunfaith@outlook.com
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    software-properties-common \
-  && apt-add-repository -y "ppa:ubuntu-toolchain-r/test" \
-  && apt-get update \
-  && apt-get install -y --no-install-recommends \
     gcc-8 \
     g++-8 \
     pandoc \
