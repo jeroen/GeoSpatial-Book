@@ -2,7 +2,11 @@ FROM rocker/verse:latest
 MAINTAINER Xiangyun Huang xiangyunfaith@outlook.com
 
 RUN apt-get update \
+  && apt-add-repository -y "ppa:ubuntu-toolchain-r/test" \
+  && apt-get update \
   && apt-get install -y --no-install-recommends \
+    gcc-8 \
+    g++-8 \
     pandoc \
     lbzip2 \
     libfftw3-dev \
