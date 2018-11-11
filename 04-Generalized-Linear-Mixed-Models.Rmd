@@ -5,3 +5,15 @@
 Three methods to calculate R2 for models with correlated errors, including Phylogenetic GLS, Phylogenetic Logistic Regression, Linear Mixed Models (LMMs), and Generalized Linear Mixed Models (GLMMs). See details in Ives 2018 <doi:10.1093/sysbio/syy060>.
 
 	https://github.com/arives/rr2
+
+
+
+## 广义线性混合效应模型
+
+材料
+
+- fitting mixed models with (temporal) correlations in R 时间相依的结构的 GLMMs及其实现 [作者 Github](https://github.com/bbolker) 主页 <https://bbolker.github.io/mixedmodels-misc/notes/corr_braindump.html>
+
+- Broadening Your Statistical Horizons: Generalized Linear Models and Multilevel Models <https://bookdown.org/roback/bookdown-bysh/>
+
+

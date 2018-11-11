@@ -1,2 +1,23 @@
 # 空间广义线性混合效应模型 {#Spatial-Generalized-Linear-Mixed-Models}
 
+
+
+## 参数估计
+
+### 限制极大似然估计
+
+
+### profile 似然估计
+
+### 贝叶斯估计
+
+
+## 高维问题
+
+
+<!-- ## 可加模型 {#Additive-Models} -->
+
+广义可加混合效应模型 Generalized additive (mixed) models
+
+- Repo for tutorial/paper on mixed-effect GAMs (General Additive Models with Mixed-Effect Smooths) <https://github.com/noamross/mixed-effect-gams>
+
