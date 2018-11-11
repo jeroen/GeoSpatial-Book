@@ -13,9 +13,15 @@ Statistical Rethinking with brms, ggplot2, and the tidyverse
 
 https://bookdown.org/ajkurz/Statistical_Rethinking_recoded/
 
+条件自回归 [CARstan](https://github.com/mbjoseph/CARstan) 实现零过多/膨胀数据特征的模型 混合二项/泊松/正态分布，自定义响应变量的分布 [Define custom response distributions with brms][custom-brms]
+
+
+
 ## Stan 简介 {#intro-stan}
 
-何为 Stan [@Stan_2018_Bayesian] RStan [@R-rstan] 是 Stan 的 R 语言接口
+何为 Stan [@Stan_2018_Bayesian] RStan [@R-rstan] 是 Stan 的 R 语言接口 [如何在 Windows 上安装 rstan][install-on-win] 
+
+
 
 设置参数
 
@@ -135,6 +141,10 @@ pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
 
 空间线性混合效应模型：是一个线性模型，认为随机效应来自空间高斯过程，混合效应指的是固定效应和随机效应，其中固定效应可以直接观察到，而随机效应不能直接观察到。
 
+spTimer: Spatio-Temporal Bayesian Modelling
+
+Fits, spatially predicts and temporally forecasts large amounts of space-time data using [1] Bayesian Gaussian Process (GP) Models, [2] Bayesian Auto-Regressive (AR) Models, and [3] Bayesian Gaussian Predictive Processes (GPP) based AR Models for spatio-temporal big-n problems. Bakar and Sahu (2015) <doi:10.18637/jss.v063.i15>.
+
 空间高斯过程回归：认为数据由空间高斯过程产生
 
 elevation 数据集最初来自 John C. Davis （1973年）所著的书《Statistics and Data Analysis in Geology》[@Davis_2002_Statistics]，后来 J. J. Warnes 和 B. D. Ripley （1987年）以该数据集为例指出空间高斯过程的协方差函数的似然估计中存在的问题 [@Warnes_1987_Problems]，Paulo J. Ribeiro Jr 和 Peter J. Diggle （2001年）将该数据集打包成自定义的 `geodata` 数据类型，放在 geoR 包里 [@Ribeiro_2001_geoR]，并在他俩合著的书《Model-based Geostatistics》中多次出现 [@Diggle_2007_Model]。
@@ -208,26 +218,17 @@ points(elevation,
 
 [^bg]: 也可以在 `plot` 或 `points` 函数中使用 `bg` 参数设置气泡的背景色，这时必须指定 `pch` 为 21 至 25 之间的值。此外，读者也可尝试用 `symbols` 函数实现
 
-# 软件工具 {#softwares-tools}
+[custom-brms]: https://github.com/stan-dev/stancon_talks/tree/stancon_2018_helsinki#2018-helsinki-peer-reviewed-contributed-talks
+[install-on-win]: https://github.com/stan-dev/rstan/wiki/Using-RStan-with-the-R-3.6.0-Prerelease-on-Windows
+
+<!-- # 软件工具 {#softwares-tools} -->
 
 ## 控制台信息 {#rsession-info}
 
 编译书籍的 R Markdown 源文件需要如下版本的 R 软件、扩展包和文档转化器 Pandoc。
 
-```{r, echo = FALSE, results="asis"}
-plat <- sessioninfo::platform_info()
-df <- data.frame(setting = names(plat), value = as.character(unclass(plat)))
-knitr::kable(df, format = "markdown")
-```
-```{r, echo = FALSE, results="asis"}
-deps <- desc::desc_get_deps()$package[-1]
-pkgs <- sessioninfo::package_info(deps)
-df <- tibble::tibble(
-  package = pkgs$package,
-  version = pkgs$ondiskversion,
-  source = stringr::str_replace(pkgs$source, "@", "\\\\@")
-)
-knitr::kable(df, format = "markdown")
+```{r, echo = TRUE}
+sessioninfo::session_info(pkgs = desc::desc_get_deps()$package[-1])
 ```
 ```{r, include = FALSE}
 ruler <- function(width = getOption("width")) {
@@ -244,3 +245,4 @@ ruler <- function(width = getOption("width")) {
 ```{r}
 ruler()
 ```
+
