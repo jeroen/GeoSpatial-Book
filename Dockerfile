@@ -3,6 +3,8 @@ MAINTAINER Xiangyun Huang xiangyunfaith@outlook.com
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
+    gcc-6 \
+    g++-6 \
     pandoc \
     lbzip2 \
     libfftw3-dev \

@@ -45,11 +45,11 @@ addons:
       - libproj-dev
       - libgeos-dev
       - libgdal-dev 
-      - gcc-8
-      - g++-8
+      - gcc-6
+      - g++-6
 
 env:
-  - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+  - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
 
 before_install:
   - mkdir ~/.R
