@@ -12,11 +12,10 @@ local({
   # Sys.getenv('RSTUDIO_PANDOC') 
   # Ugly hacker for Pandoc on MY CentOS
   if(file.exists('/etc/centos-release')){
-    Sys.setenv(CENTOS_PANDOC = "~/.local/bin") # $HOME/.local/bin does not work here
+    Sys.setenv(CENTOS_PANDOC = "~/.local/bin")
     if (Sys.which('pandoc') == '') Sys.setenv(PATH = paste(
       Sys.getenv('PATH'), Sys.getenv('CENTOS_PANDOC'), 
       sep = if (.Platform$OS.type == 'unix') ':' else ';'
     ))    
   }
-  .libPaths(c("/usr/lib64/R/site-library/", "/usr/lib64/R/library", "/usr/share/R/library"))
 })
