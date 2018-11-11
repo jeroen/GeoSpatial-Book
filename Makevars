@@ -2,7 +2,3 @@ MAKEFLAGS = -j2
 CXX14 = g++-6
 CXX14FLAGS = -O3 -mtune=native -march=native -Wno-unused-variable -Wno-unused-function -fPIC
 CXX14FLAGS += -flto -Wno-unused-local-typedefs -Wno-ignored-attributes -Wno-deprecated-declarations
-
-CXX = g++-6
-CXXFLAGS = -mtune=native -march=native -Wno-unused-variable -Wno-unused-function -fPIC
-CXXFLAGS += -flto -Wno-unused-local-typedefs -Wno-ignored-attributes -Wno-deprecated-declarations
