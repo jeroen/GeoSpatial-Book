@@ -7,8 +7,7 @@ RUN apt-get update \
         libudunits2-dev libproj-dev libgeos-dev libgdal-dev
 
 RUN mkdir ~/.R \
-    && cp Makevars ~/.R \
-    && Rscript -e 'tinytex::tlmgr_install(readLines("latex/TeXLive.pkgs"))'
+    && wget -P ~/.R https://raw.githubusercontent.com/XiangyunHuang/GeoSpatial-Book/master/Makevars
 
 RUN install2.r --error \
     desc \
@@ -18,8 +17,8 @@ RUN install2.r --error \
     sf
 
 RUN install2.r --error \
-  --repos "https://inla.r-inla-download.org/R/stable" \
-  INLA 
+    --repos "https://inla.r-inla-download.org/R/stable" \
+    INLA 
 
 COPY . /home/docker/GeoSpatial-Book
 WORKDIR /home/docker/GeoSpatial-Book
