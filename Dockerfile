@@ -34,7 +34,6 @@ RUN apt-get update \
     desc \
     geoR \
     leaflet \
-    rstan \
     rstanarm \
     sf \
   && install2.r --error \
