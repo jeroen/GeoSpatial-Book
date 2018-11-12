@@ -30,10 +30,12 @@ RUN apt-get update \
   && mkdir ~/.R \
   && wget -P ~/.R https://raw.githubusercontent.com/XiangyunHuang/GeoSpatial-Book/master/Makevars \
   && install2.r --error \
+    brms \
     desc \
     geoR \
     leaflet \
     rstan \
+    rstanarm \
     sf \
   && install2.r --error \
     --repos "https://inla.r-inla-download.org/R/stable" \
