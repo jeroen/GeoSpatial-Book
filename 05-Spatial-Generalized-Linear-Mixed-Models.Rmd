@@ -21,3 +21,15 @@
 
 - Repo for tutorial/paper on mixed-effect GAMs (General Additive Models with Mixed-Effect Smooths) <https://github.com/noamross/mixed-effect-gams>
 
+- gamm4: Generalized Additive Mixed Models using 'mgcv' and 'lme4'
+
+Estimate generalized additive mixed models via a version of function gamm() from 'mgcv', using 'lme4' for estimation.
+
+- mgcv: Mixed GAM Computation Vehicle with Automatic Smoothness Estimation
+
+Generalized additive (mixed) models, some of their extensions and other generalized ridge regression with multiple smoothing parameter estimation by (Restricted) Marginal Likelihood, Generalized Cross Validation and similar. Includes a gam() function, a wide variety of smoothers, JAGS support and distributions beyond the exponential family.
+
+
+
+
+

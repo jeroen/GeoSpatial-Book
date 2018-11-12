@@ -6,11 +6,22 @@ Three methods to calculate R2 for models with correlated errors, including Phylo
 
 	https://github.com/arives/rr2
 
+- cAIC4: Conditional Akaike Information Criterion for 'lme4'
+
+Provides functions for the estimation of the conditional Akaike information in generalized mixed-effect models fitted with (g)lmer() from 'lme4'.
+
+- lme4: Linear Mixed-Effects Models using 'Eigen' and S4
+
+Fit linear and generalized linear mixed-effects models. The models and their components are represented using S4 classes and methods. The core computational algorithms are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' "glue".
+
+  https://github.com/lme4/lme4/
 
 
-## 广义线性混合效应模型
+- glmmTMB: Generalized Linear Mixed Models using Template Model Builder
 
-材料
+Fit linear and generalized linear mixed models with various extensions, including zero-inflation. The models are fitted using maximum likelihood estimation via 'TMB' (Template Model Builder). Random effects are assumed to be Gaussian on the scale of the linear predictor and are integrated out using the Laplace approximation. Gradients are calculated using automatic differentiation.
+
+  https://github.com/glmmTMB
 
 - fitting mixed models with (temporal) correlations in R 时间相依的结构的 GLMMs及其实现 [作者 Github](https://github.com/bbolker) 主页 <https://bbolker.github.io/mixedmodels-misc/notes/corr_braindump.html>
 
