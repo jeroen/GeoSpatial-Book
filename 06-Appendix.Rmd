@@ -228,7 +228,11 @@ points(elevation,
 编译书籍的 R Markdown 源文件需要如下版本的 R 软件、扩展包和文档转化器 Pandoc。
 
 ```{r, echo = TRUE}
-sessioninfo::session_info(pkgs = desc::desc_get_deps()$package[-1])
+xfun::session_info(packages = c(
+  "rstan", "rstanarm", "brms",
+  "INLA", "ggplot2", "sf",
+  "knitr", "rmarkdown", "bookdown"
+), dependencies = FALSE)
 ```
 ```{r, include = FALSE}
 ruler <- function(width = getOption("width")) {

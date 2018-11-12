@@ -6,6 +6,7 @@ Depends:
     R (>= 3.5.0)
 Imports: 
   bookdown,
+  brms,
   colorspace (>= 1.4-0),
   desc,
   dplyr,
