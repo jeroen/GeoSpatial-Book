@@ -55,3 +55,9 @@ code/SwissRainLoaloa.R
 
 R-packages/
 ND-SD-AD.Rmd
+
+notes/*_cache/
+notes/*_files/
+notes/*.tex
+notes/*.pdf
+notes/notesdown-*

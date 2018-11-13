@@ -71,6 +71,8 @@ script:
 
 after_success:
   - make pdf
+  - Rscript -e 'rmarkdown::render("notes/notesdown.Rmd",encoding = "UTF8")'
+  - mv notes/notesdown.pdf _book/
 
 deploy:
   provider: script

@@ -1,0 +1,68 @@
+---
+title: "临时存放的笔记"
+output: 
+  pdf_document: 
+    extra_dependencies:
+      ctex: UTF8  
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
+classoption: "b5paper"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  echo = TRUE,
+  cache = TRUE,
+  out.width = "70%",
+  fig.align = "center",
+  fig.width = 6,
+  width = 69,
+  fig.asp = 0.618
+)
+knitr::knit_hooks$set(
+  optipng = knitr::hook_optipng,
+  pdfcrop = knitr::hook_pdfcrop,
+  small.mar = function(before, options, envir) {
+    if (before) par(mar = c(4.1, 4.1, 0.5, 0.5))  # smaller margin on top and right
+  },
+  twocols.mar = function(before, options, envir) {
+    if (before) par(mfrow = c(1, 2), mar = c(4.1, 4.1, 4.5, 1.5))  
+  }  
+)
+is_on_travis = identical(Sys.getenv("TRAVIS"), "true")
+is_online = curl::has_internet()
+options(
+  digits = 3,
+  citation.bibtex.max = 999,
+  bitmapType = "cairo",
+  stringsAsFactors = FALSE,
+  BioC_mirror = "https://mirrors.tuna.tsinghua.edu.cn/bioconductor",
+  repos = c(
+    CRAN = if(is_on_travis) "https://cloud.r-project.org" else "https://mirrors.tuna.tsinghua.edu.cn/CRAN/",
+    RForge = "https://r-forge.r-project.org",
+    inla = "https://inla.r-inla-download.org/R/stable"
+  ),
+  knitr.graphics.auto_pdf = FALSE,
+  width = 69,
+  str = strOptions(strict.width = "cut"),
+  tikzDefaultEngine = "xetex",
+  tikzXelatexPackages = c(
+    getOption("tikzXelatexPackages"),
+    "\\usepackage[colorlinks, breaklinks]{hyperref}",
+    "\\usepackage{color,tikz}",
+    "\\usepackage[active,tightpage,xetex]{preview}",
+    "\\PreviewEnvironment{pgfpicture}",
+    "\\usepackage{amsmath,amsfonts,mathrsfs}"
+  )  
+)
+```
+
+# 前言 {#preface}
+
+balabala
+
+```{r child = 'ch1/rmarkdown.Rmd'}
+```
