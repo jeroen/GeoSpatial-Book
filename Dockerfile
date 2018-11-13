@@ -1,4 +1,4 @@
-FROM rocker/verse:latest
+FROM rocker/geospatial:latest
 MAINTAINER Xiangyun Huang xiangyunfaith@outlook.com
 
 RUN apt-get update \
@@ -6,36 +6,13 @@ RUN apt-get update \
     gcc-6 \
     g++-6 \
     pandoc \
-    lbzip2 \
-    libfftw3-dev \
-    libgdal-dev \
-    libgeos-dev \
-    libgsl0-dev \
-    libgl1-mesa-dev \
-    libglu1-mesa-dev \
-    libhdf4-alt-dev \
-    libhdf5-dev \
-    libjq-dev \
-    liblwgeom-dev \
-    libproj-dev \
-    libprotobuf-dev \
-    libnetcdf-dev \
-    libsqlite3-dev \
-    libssl-dev \
-    libudunits2-dev \
-    netcdf-bin \
-    protobuf-compiler \
-    tk-dev \
-    unixodbc-dev \
   && mkdir ~/.R \
   && wget -P ~/.R https://raw.githubusercontent.com/XiangyunHuang/GeoSpatial-Book/master/Makevars \
   && install2.r --error \
-    brms \
-    desc \
-    geoR \
     leaflet \
+    rstan \
     rstanarm \
-    sf \
+    brms \
   && install2.r --error \
     --repos "https://inla.r-inla-download.org/R/stable" \
     INLA 
