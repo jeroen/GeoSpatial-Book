@@ -6,12 +6,12 @@ RUN apt-get update \
     gcc-6 \
     g++-6 \
     pandoc \
+    libnlopt-dev \
   && mkdir ~/.R \
   && wget -P ~/.R https://raw.githubusercontent.com/XiangyunHuang/GeoSpatial-Book/master/Makevars \
   && install2.r --error \
     leaflet \
     rstan \
-    rstanarm \
     brms \
   && install2.r --error \
     --repos "https://inla.r-inla-download.org/R/stable" \

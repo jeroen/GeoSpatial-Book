@@ -45,6 +45,7 @@ addons:
       - libproj-dev
       - libgeos-dev
       - libgdal-dev 
+      - libnlopt-dev
       - gcc-6
       - g++-6
 
