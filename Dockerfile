@@ -5,7 +5,6 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     gcc-6 \
     g++-6 \
-    pandoc \
     libnlopt-dev \
   && mkdir ~/.R \
   && wget -P ~/.R https://raw.githubusercontent.com/XiangyunHuang/GeoSpatial-Book/master/Makevars \
