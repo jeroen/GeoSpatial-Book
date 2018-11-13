@@ -58,6 +58,9 @@ options(
     "\\usepackage{amsmath,amsfonts,mathrsfs}"
   )  
 )
+lapply(c('tikzDevice'), function(pkg) {
+  if (system.file(package = pkg) == '') install.packages(pkg)
+})
 ```
 
 # 前言 {#preface}
