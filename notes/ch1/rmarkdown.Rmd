@@ -4,19 +4,31 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
-
 ## Including Plots
 
-You can also embed plots, for example:
+插入图像
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r lena,fig.cap="lena", echo=FALSE,small.mar = TRUE,out.width="45%",fig.asp=1}
+library(png)
+library(jpeg)
+library(bmp)
+library(IM)
+# create an object of class "Image"
+data(lena)
+obj = new("Image",img=img)
+# display image
+displayImg(obj@I)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+分组散点图添加平滑线和回归线
+
+```{r scatter-iris, echo=FALSE,fig.cap="线性回归模型",out.width="45%",small.mar = TRUE,fig.asp=1}
+library(car)
+scatterplot(Sepal.Length ~ Sepal.Width, col = c("black","red","blue"), pch=c(16,16,16),
+            smooth = TRUE, boxplots = "xy", groups = iris$Species, 
+            xlab = "Sepal.Width", ylab = "Sepal.Length", data = iris
+)
+```
 
 插入 TikZ 制作的图形，一行两列
 

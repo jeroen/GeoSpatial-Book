@@ -1,8 +1,10 @@
 # 空间广义线性混合效应模型 {#Spatial-Generalized-Linear-Mixed-Models}
 
-
-
 ## 参数估计
+
+成对似然 Pairwise likelihood [@Varin_2005_Pairwise]
+
+近似贝叶斯推断 [@Rue_2009_Approximate]
 
 ### 限制极大似然估计
 

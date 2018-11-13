@@ -58,14 +58,19 @@ options(
     "\\usepackage{amsmath,amsfonts,mathrsfs}"
   )  
 )
-lapply(c('tikzDevice'), function(pkg) {
+lapply(c('tikzDevice','car','IM'), function(pkg) {
   if (system.file(package = pkg) == '') install.packages(pkg)
 })
 ```
 
 # 前言 {#preface}
 
-balabala
+
+支持缩放和拖拽的交互可视化 三维地球上
+
+- Building an Interactive Globe Visualization in R [threejs][r-threejs]
+
+[r-threejs]: https://www.displayr.com/interactive-globe-r/
 
 ```{r child = 'ch1/rmarkdown.Rmd'}
 ```

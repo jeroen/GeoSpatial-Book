@@ -45,19 +45,19 @@ packages.bib
 *.log
 *.rds
 *.tar.gz
-temp.Rmd
+
 book/
 latex/not-refer.bib
 latex/default.latex
 
 code/GeostatisticalCountData.R
 code/SwissRainLoaloa.R
-
 R-packages/
-ND-SD-AD.Rmd
 
 notes/*_cache/
 notes/*_files/
 notes/*.tex
 notes/*.pdf
+notes/graph/
 notes/notesdown-*
+notes/ME-GIS/
