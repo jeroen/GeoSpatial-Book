@@ -68,8 +68,13 @@ lapply(c('tikzDevice','car','IM'), function(pkg) {
 支持缩放和拖拽的交互可视化 三维地球上
 
 - Building an Interactive Globe Visualization in R [threejs][r-threejs]
+- Help Us [Map TrumpWorld][map-trump]
+- Trumpworld Analysis: Ownership Relations in his [Business Network][analysis-trump]
 
-[r-threejs]: https://www.displayr.com/interactive-globe-r/
 
 ```{r child = 'ch1/rmarkdown.Rmd'}
 ```
+
+[map-trump]: https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld
+[analysis-trump]: https://lucidmanager.org/trumpworld-analysis/
+[r-threejs]: https://www.displayr.com/interactive-globe-r/

@@ -28,3 +28,7 @@ Fit linear and generalized linear mixed models with various extensions, includin
 - Broadening Your Statistical Horizons: Generalized Linear Models and Multilevel Models <https://bookdown.org/roback/bookdown-bysh/>
 
 
+- gllvm: Generalized Linear Latent Variable Models
+
+Generalized linear latent variable model (gllvm) for analyzing multivariate data. Estimation is performed using either Laplace approximation or variational approximation method implemented via TMB
+
