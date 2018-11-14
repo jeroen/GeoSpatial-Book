@@ -1,21 +1,31 @@
 library(methods)
 set.seed(2018)
-# 加载依赖
-library(ggplot2)
-library(StanHeaders)
-library(rstan)
-# 设置环境
-Sys.setenv(USE_CXX14 = 1)
+
 is_on_travis = identical(Sys.getenv("TRAVIS"), "true")
 is_online = curl::has_internet()
 
 library(reticulate)
 if(is_on_travis) use_virtualenv("shims") else use_python("/usr/bin/python3", required = FALSE)
 
+library(ggplot2)
+library(StanHeaders)
+library(rstan)
+
+Sys.setenv(USE_CXX14 = 1)
 options(mc.cores = if(is_on_travis) 4 else 2)
 rstan_options(auto_write = TRUE)
 
-# library(tibble)
+doc_type <- function() knitr::opts_knit$get('rmarkdown.pandoc.to')
+
+knitr::knit_hooks$set(
+  optipng = knitr::hook_optipng,
+  pdfcrop = knitr::hook_pdfcrop,
+  small.mar = function(before, options, envir) {
+    if (before) par(mar = c(4.1, 4.1, 0.5, 0.5), family = "Times")  # smaller margin on top and right
+  }
+)
+# https://github.com/yihui/knitr-examples/blob/master/085-pdfcrop.Rnw
+
 knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE,
@@ -27,18 +37,6 @@ knitr::opts_chunk$set(
   width = 69,
   fig.asp = 0.618
 )
-
-doc_type <- function() knitr::opts_knit$get('rmarkdown.pandoc.to')
-
-knitr::knit_hooks$set(
-  optipng = knitr::hook_optipng,
-  pdfcrop = knitr::hook_pdfcrop,
-  small.mar = function(before, options, envir) {
-    if (before) par(mar = c(4.1, 4.1, 0.5, 0.5))  # smaller margin on top and right
-  }
-)
-# https://github.com/yihui/knitr-examples/blob/master/085-pdfcrop.Rnw
-
 options(
   digits = 3,
   citation.bibtex.max = 999,
@@ -53,13 +51,13 @@ options(
   knitr.graphics.auto_pdf = FALSE,
   width = 69,
   str = strOptions(strict.width = "cut"),
-  tikzDefaultEngine = "xetex",
-  tikzXelatexPackages = c(
-    getOption("tikzXelatexPackages"),
-    "\\usepackage[colorlinks, breaklinks]{hyperref}",
-    "\\usepackage{color,tikz}",
-    "\\usepackage[active,tightpage,xetex]{preview}",
+  tikzDefaultEngine = "pdftex",
+  tikzLatexPackages = c(
+    "\\usepackage{tikz}",
+    "\\usepackage[active,tightpage,psfixbb]{preview}",
     "\\PreviewEnvironment{pgfpicture}",
-    "\\usepackage{amsmath,amsfonts,mathrsfs}"
+    "\\setlength\\PreviewBorder{0pt}",
+    "\\usepackage[colorlinks, breaklinks]{hyperref}",
+    "\\usepackage{amsmath,amsfonts,mathrsfs,times}"
   )
 )

@@ -11,26 +11,25 @@ classoption: "b5paper"
 ---
 
 ```{r setup, include=FALSE}
+knitr::knit_hooks$set(
+  optipng = knitr::hook_optipng,
+  pdfcrop = knitr::hook_pdfcrop,
+  small.mar = function(before, options, envir) {
+    # smaller margin on top and right
+    if (before) par(mar = c(4.1, 4.1, 0.5, 0.5), family = "Times")  
+  }
+)
 knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE,
   echo = TRUE,
   cache = TRUE,
+  small.mar = TRUE,
   out.width = "70%",
   fig.align = "center",
   fig.width = 6,
   width = 69,
   fig.asp = 0.618
-)
-knitr::knit_hooks$set(
-  optipng = knitr::hook_optipng,
-  pdfcrop = knitr::hook_pdfcrop,
-  small.mar = function(before, options, envir) {
-    if (before) par(mar = c(4.1, 4.1, 0.5, 0.5))  # smaller margin on top and right
-  },
-  twocols.mar = function(before, options, envir) {
-    if (before) par(mfrow = c(1, 2), mar = c(4.1, 4.1, 4.5, 1.5))  
-  }  
 )
 is_on_travis = identical(Sys.getenv("TRAVIS"), "true")
 is_online = curl::has_internet()
@@ -48,15 +47,15 @@ options(
   knitr.graphics.auto_pdf = FALSE,
   width = 69,
   str = strOptions(strict.width = "cut"),
-  tikzDefaultEngine = "xetex",
-  tikzXelatexPackages = c(
-    getOption("tikzXelatexPackages"),
-    "\\usepackage[colorlinks, breaklinks]{hyperref}",
-    "\\usepackage{color,tikz}",
-    "\\usepackage[active,tightpage,xetex]{preview}",
+  tikzDefaultEngine = "pdftex",
+  tikzLatexPackages = c(
+    "\\usepackage{tikz}",
+    "\\usepackage[active,tightpage,psfixbb]{preview}",
     "\\PreviewEnvironment{pgfpicture}",
-    "\\usepackage{amsmath,amsfonts,mathrsfs}"
-  )  
+    "\\setlength\\PreviewBorder{0pt}",
+    "\\usepackage[colorlinks, breaklinks]{hyperref}",
+    "\\usepackage{amsmath,amsfonts,mathrsfs,times}"
+  )
 )
 lapply(c('tikzDevice','car','IM'), function(pkg) {
   if (system.file(package = pkg) == '') install.packages(pkg)
