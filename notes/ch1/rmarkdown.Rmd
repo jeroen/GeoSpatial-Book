@@ -239,3 +239,32 @@ mtext("$f(x_{1},x_{2}) = \\frac{1}{2\\pi\\sqrt{\\sigma_{11}\\sigma_{22}(1-\\rho^
 # par(op)
 ```
 
+
+```{r lattice,fig.cap="表达式二元密度函数",echo=FALSE,fig.width=8,out.width="90%"}
+library(lattice)
+wireframe(z ~ x1 + x2,
+  data = data.frame(x1 = x1, x2 = rep(x2, each = length(x1)), z = z),
+  xlab = expression(x[1]), ylab = expression(x[2]),
+  zlab = expression(italic(f) ~ group("(",list(x[1],x[2]),")")))
+```
+
+```{r unicode-math-Greek-letters,fig.cap="希腊字母用 unicode 字符代替",echo=FALSE,dev='cairo_pdf'}
+# https://stackoverflow.com/questions/41190525/adjust-margins-in-persp-persp3d-in-r
+# https://stackoverflow.com/questions/37571376/how-to-customize-nticks-in-persp-r
+# https://stackoverflow.com/questions/43507680/are-xlab-ylab-and-zlab-in-persp-incompatible-with-bquote
+x <- seq(-10, 10, len = 30)
+y <- seq(0, 5, len = 30)
+f <- function(x, y) {
+  dnorm(2, x, y)
+}
+z <- outer(x, y, f)
+# Try using unicode symbols 代替希腊字母
+# 一般表达式如何转 unicode 字符 
+# cairo_pdf(file="test.pdf") # 不要使用 pdf 不然 sigma 不能正确渲染
+persp(x, y, z,
+  theta = 30, phi = 30, expand = 0.5, col = "lightblue",
+  xlab = "\u03bc", ylab = "\u03c3",
+  zlab = paste("Likelihood ", "(\u03bc,\u03c3)", sep = "")
+)
+```
+
