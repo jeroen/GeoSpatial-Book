@@ -32,6 +32,6 @@ Estimate generalized additive mixed models via a version of function gamm() from
 Generalized additive (mixed) models, some of their extensions and other generalized ridge regression with multiple smoothing parameter estimation by (Restricted) Marginal Likelihood, Generalized Cross Validation and similar. Includes a gam() function, a wide variety of smoothers, JAGS support and distributions beyond the exponential family.
 
 
-
+https://mirrors.tuna.tsinghua.edu.cn/CRAN/web/packages/SolveRationalMatrixEquation/index.html
 
 

@@ -3,3 +3,32 @@
 ---
 
 GeoSpatial Data Visualization in R
+
+
+## Reproducibility
+
+拉取 Docker 镜像
+
+```
+docker run --name book -d -p 8282:8787 -e ROOT=TRUE \
+ -e USER=rstudio -e PASSWORD=cloud cloud2016/geospatial-book
+```
+
+克隆仓库
+
+```
+git clone https://github.com/XiangyunHuang/GeoSpatial-Book.git
+```
+
+安装依赖
+
+```
+devtools::install_deps('GeoSpatial-Book/')
+```
+
+编译网页书籍
+
+```
+bookdown::render_book("index.Rmd") # to build the book
+browseURL("_book/index.html") # to view it
+```

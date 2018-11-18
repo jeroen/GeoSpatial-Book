@@ -8,7 +8,7 @@ When you click the **Knit** button a document will be generated that includes bo
 
 插入图像
 
-```{r lena,fig.cap="lena", echo=FALSE,small.mar = TRUE,out.width="45%",fig.asp=1}
+```{r lena,fig.cap="lena", echo=FALSE,small.mar = TRUE,out.width="45%",fig.asp=1,eval=FALSE}
 library(png)
 library(jpeg)
 library(bmp)
@@ -263,8 +263,37 @@ z <- outer(x, y, f)
 # cairo_pdf(file="test.pdf") # 不要使用 pdf 不然 sigma 不能正确渲染
 persp(x, y, z,
   theta = 30, phi = 30, expand = 0.5, col = "lightblue",
-  xlab = "\u03bc", ylab = "\u03c3",
-  zlab = paste("Likelihood ", "(\u03bc,\u03c3)", sep = "")
+  xlab = "\u03bc", ylab = "\u03c3\u207F",
+  zlab = paste("Likelihood ", "(\u03bc,\u03c3\u207F)", sep = "")
+)
+```
+
+
+```{r log-lik,fig.cap="对数似然函数曲面"}
+set.seed(1234)
+n <- 20 # 随机数的个数
+x <- rexp(n, rate = 5) # 服从指数分布的随机数
+m <- 40 # 网格数
+mv <- seq(mean(x) - 1.5 * sd(x) / sqrt(n),
+  mean(x) + 1.5 * sd(x) / sqrt(n),
+  length.out = m
+)
+sv <- seq(0.8 * sd(x), 1.5 * sd(x), length.out = m)
+z <- matrix(NA, m, m)
+loglikelihood <- function(b) -sum(dnorm(x, b[1], b[2], log = TRUE))
+for (i in 1:m)
+  for (j in 1:m)
+    z[i, j] <- -loglikelihood(c(mv[i], sv[j]))
+jet.colors <- colorRampPalette(c("gray100", "gray40"))
+nbcol <- 100
+color <- jet.colors(nbcol)
+zfacet <- z[-1, -1] + z[-1, -m] + z[-m, -1] + z[-m, -m]
+facetcol <- cut(zfacet, nbcol)
+persp(mv, sv, z,
+  xlab = "\n \u03bc", ylab = "\n \u03c3",
+  zlab = "\n log-likelihood",
+  # ticktype = "detailed",
+  phi = 35, theta = -30, col = color[facetcol]
 )
 ```
 

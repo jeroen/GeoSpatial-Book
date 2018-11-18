@@ -16,7 +16,7 @@ fontsize: 10pt
 indent: 40pt
 #mathspec: yes
 #verbatim-in-note: yes
-bibliography: [latex/book.bib, latex/packages.bib, latex/articles.bib]
+bibliography: [latex/book.bib, latex/packages.bib, latex/articles.bib, latex/not-refer.bib]
 biblio-style: plainnat
 link-citations: yes
 colorlinks: yes

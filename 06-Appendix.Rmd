@@ -4,7 +4,7 @@
 
 # 概率编程 {#probabilistic-programming-language}
 
-概率编程语言，图模型，贝叶斯推断，马尔科夫链蒙特卡罗，汉密尔顿蒙特卡罗，随机模拟，抽样分布，贝叶斯定理，先验后验
+概率编程语言，图模型，贝叶斯推断，马尔科夫链蒙特卡罗，汉密尔顿蒙特卡罗，随机模拟，抽样分布，贝叶斯定理，先验后验 
 
 介绍 Stan 然后以空间广义线性混合效应模型为例，比较 geoRglm geoCount INLA 和 Stan 在高斯、二项、泊松三个真实数据集上的表现
 瑞士降雨量数据，冈比亚儿童疟疾，喀麦隆河盲病，朗格拉普岛核污染
@@ -171,34 +171,6 @@ with(dat, {
     cex = 2
   )
 })
-
-# cols <- rev(gray.colors(4)) # terrain.colors(4)
-# elev2col <- function(x) {
-#   if (x <= 1) {
-#     col <- cols[1]
-#   } else if (x <= 2) {
-#     col <- cols[2]
-#   } else if (x <= 3) {
-#     col <- cols[3]
-#   } else if (x <= 4) 
-#     col <- cols[4]
-# }
-# 
-# dat <- transform(dat, elev2col = sapply((Elevation - 600) / 90, elev2col, USE.NAMES = TRUE))
-# 
-# with(dat, {
-#   plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
-#   for (i in seq(dim(dat)[1])) {
-#     points(dat[i, c(1, 2)], pch = 21, bg = dat[i, 4], cex = 2)
-#   }
-# })
-# 
-# with(dat, {
-#   plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
-#   for (i in seq(dim(dat)[1])) {
-#     points(dat[i, c(1, 2)], pch = 21, bg = dat[i, 4], cex = 2)
-#   }
-# })
 ```
 ```{r include=FALSE,eval=FALSE}
 library(geoR)
@@ -250,3 +222,45 @@ ruler <- function(width = getOption("width")) {
 ruler()
 ```
 
+# 字母表 {#letter-numbers}
+
+常用字母表备查，公式环境下
+
+Table: (\#tab:letters) 希腊字母表
+
+ 希腊字母      | LaTeX 代码     | Unicode 代码 |  希腊字母   |  LaTeX 代码   |  Unicode 代码
+:------------- | :------------- | :----------- | :---------- | :------------ | :-------------
+ $\alpha$      | `\alpha`       | `\u03B1`     |  $\mu$      | `\mu`         |   `\u03BC`
+ $\beta$       | `\beta`        | `\u03B2`     |  $\nu$      | `\nu`         |   `\u03BD`
+ $\gamma$      | `\gamma`       | `\u03B3`     |  $\xi$      | `\xi`         |   `\u03BE`
+ $\delta$      | `\delta`       | `\u03B4`     |  $\omicron$ | `\omicron`    |   `\u03BF`
+ $\epsilon$    | `\epsilon`     | `\u03B5`     |  $\pi$      | `\pi`         |   `\u03C0`
+ $\zeta$       | `\zeta`        | `\u03B6`     |  $\rho$     | `\rho`        |   `\u03C1`
+ $\eta$        | `\eta`         | `\u03B7`     |  $\upsilon$ | `\upsilon`    |   `\u03C5`
+ $\theta$      | `\theta`       | `\u03B8`     |  $\phi$     | `\phi`        |   `\u03C6`
+ $\iota$       | `\iota`        | `\u03B9`     |  $\chi$     | `\chi`        |   `\u03C7`
+ $\kappa$      | `\kappa`       | `\u03BA`     |  $\psi$     | `\psi`        |   `\u03C8`
+ $\lambda$     | `\lambda`      | `\u03BB`     |  $\omega$   | `\omega`      |   `\u03C9`
+ $\sigma$      | `\sigma`       | `\u03C3`     |  $\tau$     | `\tau`        |   `\u03C4`  
+
+ 
+ 
+Table: (\#tab:super-sub-script) 数字上下标
+
+  上标数字 | LaTeX 代码| Unicode 代码 | 下标数字   | LaTeX 代码 |  Unicode 代码
+:--------- |:--------- | :---------   | :--------- | :--------- | :---------
+ ${}^0$    | `{}^0`    |   `\u2070`   |   ${}_0$   |   `{}_0`   |  `\u2080`
+ ${}^1$    | `{}^1`    |   `\u00B9`   |   ${}_1$   |   `{}_1`   |  `\u2081`
+ ${}^2$    | `{}^2`    |   `\u00B2`   |   ${}_2$   |   `{}_2`   |  `\u2082`
+ ${}^3$    | `{}^3`    |   `\u00B2`   |   ${}_3$   |   `{}_3`   |  `\u2083`
+ ${}^4$    | `{}^4`    |   `\u2074`   |   ${}_4$   |   `{}_4`   |  `\u2084`
+ ${}^5$    | `{}^5`    |   `\u2075`   |   ${}_5$   |   `{}_5`   |  `\u2085`
+ ${}^6$    | `{}^6`    |   `\u2076`   |   ${}_6$   |   `{}_6`   |  `\u2086`
+ ${}^7$    | `{}^7`    |   `\u2077`   |   ${}_7$   |   `{}_7`   |  `\u2087`
+ ${}^8$    | `{}^8`    |   `\u2078`   |   ${}_8$   |   `{}_8`   |  `\u2088`
+ ${}^9$    | `{}^9`    |   `\u2079`   |   ${}_9$   |   `{}_9`   |  `\u2089`
+ ${}^n$    | `{}^n`    |   `\u207F`   |   ${}_n$   |   `{}_n`   |  -
+
+其它字母，请点击[链接][unicode-tab]
+
+[unicode-tab]: https://www.ssec.wisc.edu/~tomw/java/unicode.html

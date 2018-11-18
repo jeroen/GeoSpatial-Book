@@ -21,7 +21,7 @@ knitr::knit_hooks$set(
   optipng = knitr::hook_optipng,
   pdfcrop = knitr::hook_pdfcrop,
   small.mar = function(before, options, envir) {
-    if (before) par(mar = c(4.1, 4.1, 0.5, 0.5), family = "Times")  # smaller margin on top and right
+    if (before) par(mar = c(4.1, 4.1, 0.5, 0.5))  # smaller margin on top and right
   }
 )
 # https://github.com/yihui/knitr-examples/blob/master/085-pdfcrop.Rnw
