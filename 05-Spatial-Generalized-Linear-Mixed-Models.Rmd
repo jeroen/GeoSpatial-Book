@@ -1,23 +1,20 @@
 # 空间广义线性混合效应模型 {#Spatial-Generalized-Linear-Mixed-Models}
 
-## 参数估计
+## 参数估计 {#Parameter-Estimation}
 
 成对似然 Pairwise likelihood [@Varin_2005_Pairwise]
 
 近似贝叶斯推断 [@Rue_2009_Approximate]
 
-### 限制极大似然估计
+### 限制极大似然估计{#Restricted-Maximum-Likelihood-Estimation}
 
 
-### profile 似然估计
+### 剖面似然估计 {#Profile-Likelihood-Estimation}
 
-### 贝叶斯估计
-
-
-## 高维问题
+### 贝叶斯估计 {#Bayesian-Estimation}
 
 
-<!-- ## 可加模型 {#Additive-Models} -->
+## 可加模型 {#Additive-Models}
 
 广义可加混合效应模型 Generalized additive (mixed) models
 
@@ -31,7 +28,8 @@ Estimate generalized additive mixed models via a version of function gamm() from
 
 Generalized additive (mixed) models, some of their extensions and other generalized ridge regression with multiple smoothing parameter estimation by (Restricted) Marginal Likelihood, Generalized Cross Validation and similar. Includes a gam() function, a wide variety of smoothers, JAGS support and distributions beyond the exponential family.
 
+## 应用 {#Real-Data-Analysis}
 
-https://mirrors.tuna.tsinghua.edu.cn/CRAN/web/packages/SolveRationalMatrixEquation/index.html
+Evangelos Evangelou 和 Vivekananda Roy （2018年）[@Evangelou_2018_Effective] 提出 Generalized Importance Sampling 估计 SGLMM 模型参数，分析了 ronglap 和 Rhizoctonia root rot 两个真实数据集。
 
-
+Yawen Guan 和 Murali Haran （2018年）[@Guan_2018_Projection] 提出 Projection-Based Approach 近似高维积分达到降维的目的。包含两个数据分析

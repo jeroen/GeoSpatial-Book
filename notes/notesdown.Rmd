@@ -64,8 +64,9 @@ lapply(c('tikzDevice','car','IM'), function(pkg) {
 
 # 前言 {#preface}
 
+统计图形：图形中一定有统计方法，如平滑、回归、残差等统计意义或者能揭示数据中的某种趋势规律，否则只是一个图而已，重点一定在图所展示的内容上。否则，只能说是数据可视化，因为它更强调绘图技法，视觉效果
 
-支持缩放和拖拽的交互可视化 三维地球上
+支持缩放和拖拽的交互可视化三维地球上
 
 - Building an Interactive Globe Visualization in R [threejs][r-threejs]
 - Help Us [Map TrumpWorld][map-trump]
