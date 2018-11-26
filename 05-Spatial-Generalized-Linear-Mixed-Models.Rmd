@@ -28,6 +28,23 @@ Estimate generalized additive mixed models via a version of function gamm() from
 
 Generalized additive (mixed) models, some of their extensions and other generalized ridge regression with multiple smoothing parameter estimation by (Restricted) Marginal Likelihood, Generalized Cross Validation and similar. Includes a gam() function, a wide variety of smoothers, JAGS support and distributions beyond the exponential family.
 
+- CAST: 'caret' Applications for Spatial-Temporal Models
+
+Supporting functionality to run 'caret' with spatial or spatial-temporal data. 'caret' is a frequently used package for model training and prediction using machine learning. This package includes functions to improve spatial-temporal modelling tasks using 'caret'. It prepares data for Leave-Location-Out and Leave-Time-Out cross-validation which are target-oriented validation strategies for spatial-temporal models. To decrease overfitting and improve model performances, the package implements a forward feature selection that selects suitable predictor variables in view to their contribution to the target-oriented performance.
+
+https://github.com/environmentalinformatics-marburg/CAST
+https://cran.r-project.org/web/packages/CAST/vignettes/CAST-intro.html
+
+spaMM: Mixed-Effect Models, Particularly Spatial Models
+
+https://kimura.univ-montp2.fr/~rousset/spaMM.htm
+
+Inference based on mixed-effect models, including generalized linear mixed models with spatial correlations and models with non-Gaussian random effects (e.g., Beta). Variation in residual variance (heteroscedasticity) can itself be represented by a generalized linear mixed model. Various approximations of likelihood or restricted likelihood are implemented, in particular h-likelihood (Lee and Nelder 2001 <doi:10.1093/biomet/88.4.987>) and Laplace approximation.
+
+https://mirrors.tuna.tsinghua.edu.cn/CRAN/web/packages/SolveRationalMatrixEquation/index.html
+
+解有理矩阵方程与高斯过程回国模型可能有关
+
 ## 应用 {#Real-Data-Analysis}
 
 Evangelos Evangelou 和 Vivekananda Roy （2018年）[@Evangelou_2018_Effective] 提出 Generalized Importance Sampling 估计 SGLMM 模型参数，分析了 ronglap 和 Rhizoctonia root rot 两个真实数据集。

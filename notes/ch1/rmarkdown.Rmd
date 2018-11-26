@@ -295,5 +295,50 @@ persp(mv, sv, z,
   # ticktype = "detailed",
   phi = 35, theta = -30, col = color[facetcol]
 )
+# 添加极大值点
+# 除指数分布外，还有正态、二项、泊松分布观察其似然曲面的特点，都是单峰，有唯一极值点
+# 再考虑正态混合模型的似然曲面
 ```
 
+拉丁字母和特殊符号的图形
+
+```r
+pdf(file = "reg-plot-latin1.pdf", encoding = "ISOLatin1",
+    width = 7, height = 7, compress = FALSE)
+## The following two examples use latin1 characters: these may not
+## appear correctly (or be omitted entirely).
+plot(1:10, 1:10,
+  main = "text(...) examples\n~~~~~~~~~~~~~~",
+  sub = "R is GNU ©, but not ® ..."
+)
+
+mtext("«Latin-1 accented chars»: éè øØ å<Å æ<Æ", side = 3)
+
+points(c(6, 2), c(2, 1), pch = 3, cex = 4, col = "red")
+
+text(6, 2, "the text is CENTERED around (x,y) = (6,2) by default",
+  cex = .8
+)
+
+text(2, 1, "or Left/Bottom - JUSTIFIED at (2,1) by 'adj = c(0,0)'",
+  adj = c(0, 0)
+)
+
+text(4, 9, expression(hat(beta) == (X^t * X)^{-1} * X^t * y))
+
+text(4, 8.4, expression(hat(beta) == (X^t * X)^{-1} * X^t * y), cex = .75)
+
+text(4, 7, expression(bar(x) == sum(frac(x[i], n), i == 1, n)))
+
+## Two more latin1 examples
+text(
+  5, 10.2,
+  "Le français, c'est façile: Règles, Liberté, Egalité, Fraternité..."
+)
+
+text(
+  5, 9.8,
+  "Jetz no chli züritüütsch: (noch ein bißchen Zürcher deutsch)"
+)
+dev.off()
+```

@@ -1,4 +1,4 @@
-book_filename: "GeoSpatial"
+book_filename: "GeoSpatial-Book"
 delete_merged_file: true
 language:
   label:
@@ -22,3 +22,7 @@ rmd_files:
   - "07-References.Rmd"
 
 edit: https://github.com/XiangyunHuang/GeoSpatial-Book/edit/master/%s
+output_dir: _book
+new_session: yes 
+before_chapter_script: ["_common.R"]
+clean: ["packages.bib", "GeoSpatial-Book.rds"]

@@ -22,15 +22,10 @@ link-citations: yes
 colorlinks: yes
 toccolor: magenta
 description: "GeoSpatial Data Visualization with ggplot2 and Analysis with rstan in R."
-url: 'https\://bookdown.org/xiangyun/geospatial/'
+url: 'https\://r-spatial.netlify.com'
 github-repo: XiangyunHuang/GeoSpatial-Book
 #cover-image: images/cover.png
 ---
-
-
-```{r setup,include=FALSE}
-source(file = 'code/_common.R')
-```
 
 \mainmatter
 
@@ -52,11 +47,17 @@ Remember each Rmd file contains one and only one chapter, and a chapter is defin
 
 To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
 
-## 获取帮助 {#Getting-Help-with-R}
+## 获取帮助 {#Getting-Help-with-R .unnumbered}
 
+https://www.r-project.org/help.html
 
+在线搜索 https://cran.r-project.org/search.html
 
-## 约定 {#colophon}
+高频问题 https://cran.r-project.org/faqs.html
+
+[rseek]: https://rseek.org/
+
+## 约定 {#colophon .unnumbered}
 \index{Pandoc}
 
 这本书在 RStudio 里用 bookdown 写作。网站托管在 Netlify 上，Github 的每次提交都会触发 Travis CI 重新编译源码书稿，编译成功后，自动推送到 Netlify 上，网站会随之更新。书籍的源代码存放在 Github 上。书中显示代码的字体是 [Source Code Pro](https://github.com/silkeh/latex-sourcecodepro) 

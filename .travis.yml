@@ -1,9 +1,6 @@
 language: r
 r:
-  - release
   - devel
-
-sudo: true # required by rstan
 
 cache:
   packages: true
@@ -46,11 +43,11 @@ addons:
       - libgeos-dev
       - libgdal-dev 
       - libnlopt-dev
-      - gcc-6
-      - g++-6
+      - gcc-8
+      - g++-8
 
 env:
-  - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
+  - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
 
 before_install:
   - mkdir ~/.R

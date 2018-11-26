@@ -46,4 +46,20 @@ https://github.com/strengejacke/ggeffects
 
 Summarizes key information about statistical objects in tidy tibbles. This makes it easy to report results, create plots and consistently work with large numbers of models at once. Broom provides three verbs that each provide different types of information about a model. tidy() summarizes information about model components such as coefficients of a regression. glance() reports information about an entire model, such as goodness of fit measures like AIC and BIC. augment() adds information about individual observations to a dataset, such as fitted values or influence measures.
 
+H-likelihood [@Lee_2018_Generalized]
+
+- DHARMa: Diagnostics for HierArchical Regession Models
+
+https://github.com/florianhartig/DHARMa
+
+The 'DHARMa' package uses a simulation-based approach to create readily interpretable scaled (quantile) residuals for fitted generalized linear mixed models. Currently supported are generalized linear mixed models from 'lme4' (classes 'lmerMod', 'glmerMod'), generalized additive models ('gam' from 'mgcv'), 'glm' (including 'negbin' from 'MASS', but excluding quasi-distributions) and 'lm' model classes. Alternatively, externally created simulations, e.g. posterior predictive simulations from Bayesian software such as 'JAGS', 'STAN', or 'BUGS' can be processed as well. The resulting residuals are standardized to values between 0 and 1 and can be interpreted as intuitively as residuals from a linear regression. The package also provides a number of plot and test functions for typical model misspecification problems, such as over/underdispersion, zero-inflation, and residual spatial and temporal autocorrelation.
+
+- bernor: Logit-Normal generalized linear mixed models (GLMM) using ordinary, independent and identically distributed Monte Carlo. 
+
+Bernoulli Regression with Normal Random Effects (R package, not on CRAN)
+
+https://github.com/cjgeyer/bernor
+
+http://www.stat.umn.edu/geyer/bernor/
+Monte Carlo likelihood inference for missing data models [@Sung_2007_Monte]
 

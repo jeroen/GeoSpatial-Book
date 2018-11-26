@@ -1,5 +1,6 @@
 # 广义线性模型 {#Generalized-Linear-Models}
 
+参考文献 An Introduction to Generalized Linear Models [@Dobson_2018_Generalized] 和 Generalized Linear Models [@McCullagh_1989_Generalized]
 
 ## 极大似然估计
 
