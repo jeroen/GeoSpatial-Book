@@ -18,8 +18,10 @@ knitr::knit_hooks$set(
 knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE,
-  echo = TRUE,
+  echo = FALSE,
   cache = TRUE,
+  small.mar = TRUE,
+  fig.show = 'hold',
   out.width = "70%",
   fig.align = "center",
   fig.width = 6,

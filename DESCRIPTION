@@ -12,8 +12,6 @@ Imports:
   HSAR,
   geoR,
   ggplot2 (>= 3.1.0),
-  INLA (>= 18.7.12),
-  rmarkdown,
   rgdal,
   rgeos,
   rstan (>= 2.18.2),

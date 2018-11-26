@@ -23,4 +23,4 @@ bookdown::pdf_book:
   #template: latex/default.latex
   #highlight: NULL
   #highlight_bw: yes
-bookdown::epub_book: default
+#bookdown::epub_book: default

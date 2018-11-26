@@ -25,7 +25,7 @@ https://bookdown.org/ajkurz/Statistical_Rethinking_recoded/
 
 设置参数
 
-```{r stan-setup}
+```{r stan-setup,echo=TRUE}
 Sys.setenv(USE_CXX14 = 1)
 library("rstan") # observe startup messages
 rstan_options(auto_write = TRUE)
@@ -34,7 +34,7 @@ options(mc.cores = parallel::detectCores()/2)
 
 准备数据
 
-```{r load-data}
+```{r load-data,echo=TRUE}
 schools_dat <- list(J = 8, 
                     y = c(28,  8, -3,  7, -1,  1, 18, 12),
                     sigma = c(15, 10, 16, 11,  9, 11, 10, 18))
@@ -42,7 +42,7 @@ schools_dat <- list(J = 8,
 
 编译运行模型
 
-```{r compile-run,message=FALSE,warning=FALSE}
+```{r compile-run,message=FALSE,warning=FALSE,echo=TRUE}
 system.time({
   fit <- stan(
     file = "code/stan/8schools.stan", data = schools_dat,
@@ -94,7 +94,7 @@ summary(fit)
 
 输出结果
 
-```{r stan-output}
+```{r stan-output,echo=TRUE}
 print(fit, digits = 1)
 ```
 
@@ -105,11 +105,11 @@ print(fit, digits = 1)
 
 诊断收敛性
 
-```{r report}
+```{r report,echo=TRUE}
 check_hmc_diagnostics(fit)
 ```
 
-```{r check-model,fig.cap="后验分布的散点矩阵图",out.width="35%",fig.show='hold',fig.asp=1,fig.width=4.5,fig.subcap=c("原始值","取对数")}
+```{r check-model,fig.cap="后验分布的散点矩阵图",out.width="35%",fig.asp=1,fig.width=4.5,fig.subcap=c("原始值","取对数")}
 pairs(fit, pars = c("mu", "tau", "lp__"))
 pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
 ```
@@ -153,7 +153,7 @@ elevation 数据集最初来自 John C. Davis （1973年）所著的书《Statis
 
 以海拔数据为例，预测海拔高度，线性预测与克里金插值的关系
 
-```{r elevation-buble,echo=FALSE,fig.cap="空间数据可视化：以海拔数据为例",fig.subcap=c("气泡图","散点图"),small.mar=TRUE,out.width="35%",fig.show='hold',fig.asp=1,fig.width=4.5}
+```{r elevation-buble,fig.cap="空间数据可视化：以海拔数据为例",fig.subcap=c("气泡图","散点图"),out.width="35%",fig.asp=1,fig.width=4.5}
 dat <- read.table(file = "data/NOTREDAM.TXT", header = T)
 with(dat, {
   plot(c(0, 7), c(0, 7), type = "n", xlab = "East-West", ylab = "North-South")
@@ -172,7 +172,7 @@ with(dat, {
   )
 })
 ```
-```{r include=FALSE,eval=FALSE}
+```{r,eval=FALSE}
 library(geoR)
 points(elevation,
   xlab = "East-West", ylab = "North-South",
@@ -205,13 +205,12 @@ points(elevation,
 
 编译书籍的 R Markdown 源文件需要如下版本的 R 软件、扩展包和文档转化器 Pandoc。
 
-```{r, echo = TRUE}
+```{r session, echo=TRUE}
 xfun::session_info(packages = c(
-  "rstan", "INLA", "ggplot2", "sf",
-  "knitr", "rmarkdown", "bookdown"
-), dependencies = FALSE)
+  "rstan", "ggplot2", "sf"
+))
 ```
-```{r, include = FALSE}
+```{r}
 ruler <- function(width = getOption("width")) {
   x <- seq_len(width)
   y <- dplyr::case_when(
@@ -223,7 +222,7 @@ ruler <- function(width = getOption("width")) {
   cat(x %% 10, "\n", sep = "")
 }
 ```
-```{r}
+```{r,echo=TRUE}
 ruler()
 ```
 
