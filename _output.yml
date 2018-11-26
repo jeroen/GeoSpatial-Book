@@ -20,7 +20,4 @@ bookdown::pdf_book:
   dev: "cairo_pdf"
   extra_dependencies:
     ctex: UTF8, heading
-  #template: latex/default.latex
-  #highlight: NULL
-  #highlight_bw: yes
-#bookdown::epub_book: default
+bookdown::epub_book: default

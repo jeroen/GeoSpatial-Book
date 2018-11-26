@@ -193,7 +193,7 @@ points(elevation,
 [custom-brms]: https://github.com/stan-dev/stancon_talks/tree/stancon_2018_helsinki#2018-helsinki-peer-reviewed-contributed-talks
 [install-on-win]: https://github.com/stan-dev/rstan/wiki/Using-RStan-with-the-R-3.6.0-Prerelease-on-Windows
 
-<!-- # 软件工具 {#softwares-tools} -->
+<!-- # 软件工具 {#software-tools} -->
 
 
 
@@ -237,7 +237,7 @@ Table: (\#tab:letters) 希腊字母表
  $\alpha$      | `\alpha`       | `\u03B1`     |  $\mu$      | `\mu`         |   `\u03BC`
  $\beta$       | `\beta`        | `\u03B2`     |  $\nu$      | `\nu`         |   `\u03BD`
  $\gamma$      | `\gamma`       | `\u03B3`     |  $\xi$      | `\xi`         |   `\u03BE`
- $\delta$      | `\delta`       | `\u03B4`     |  $\omicron$ | `\omicron`    |   `\u03BF`
+ $\delta$      | `\delta`       | `\u03B4`     |  $\varphi$  | `\varphi`     |   `\u03C6`
  $\epsilon$    | `\epsilon`     | `\u03B5`     |  $\pi$      | `\pi`         |   `\u03C0`
  $\zeta$       | `\zeta`        | `\u03B6`     |  $\rho$     | `\rho`        |   `\u03C1`
  $\eta$        | `\eta`         | `\u03B7`     |  $\upsilon$ | `\upsilon`    |   `\u03C5`
@@ -246,8 +246,6 @@ Table: (\#tab:letters) 希腊字母表
  $\kappa$      | `\kappa`       | `\u03BA`     |  $\psi$     | `\psi`        |   `\u03C8`
  $\lambda$     | `\lambda`      | `\u03BB`     |  $\omega$   | `\omega`      |   `\u03C9`
  $\sigma$      | `\sigma`       | `\u03C3`     |  $\tau$     | `\tau`        |   `\u03C4`  
-
- 
  
 Table: (\#tab:super-sub-script) 数字上下标
 
@@ -265,6 +263,6 @@ Table: (\#tab:super-sub-script) 数字上下标
  ${}^9$    | `{}^9`    |   `\u2079`   |   ${}_9$   |   `{}_9`   |  `\u2089`
  ${}^n$    | `{}^n`    |   `\u207F`   |   ${}_n$   |   `{}_n`   |  -
 
-其它字母，请点击[链接][unicode-tab]
+其它字母，请查看 [Unicode 字母表][unicode-tab]
 
 [unicode-tab]: https://www.ssec.wisc.edu/~tomw/java/unicode.html
