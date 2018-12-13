@@ -1,3 +1,63 @@
 # 介绍 {#Introduction}
 
 线性模型和广义线性模型不含空间随机效应，可以作为模型的初探，描述数据的主要特征，也是复杂模型的特殊情况，提供模型参数的初始估计
+
+Statistical Learning with Sparsity: The Lasso and Generalizations
+
+https://web.stanford.edu/~hastie/StatLearnSparsity/
+
+Computer Age Statistical Inference: Algorithms, Evidence and Data Science
+
+http://web.stanford.edu/~hastie/CASI/
+
+An Introduction to Statistical Learning with Applications in R
+
+http://www-bcf.usc.edu/~gareth/ISL/
+
+The Elements of Statistical Learning: Data Mining, Inference, and Prediction
+
+https://web.stanford.edu/~hastie/ElemStatLearn/
+
+## Statistical Computing with R
+
+The following three books treat traditional topics in statistical computing, such as optimization, simulation, probability calculations, and computational linear algebra, using R (although the coverage of particular topics in the books differs). All offer introductions to R programming. Of these books, Braun and Murdoch is the briefest and most accessible.
+
+- W. J. Braun and D. J. Murdoch, A First Course in Statistical Programming with R, Second Edition. Cambridge: Cambridge University Press, 2016.
+- O. Jones, R. Maillardet, and A. Robinson, Introduction to Scientific Programming and Simulation Using R, Second Edition. Boca Raton: Chapman and Hall, 2014.
+- M. L. Rizzo. Statistical Computing with R, Boca Raton: Chapman and Hall, 2008.
+
+免费课程： A Brief Introduction to Bayesian Modeling Using Stan <https://www.metrumrg.com/course>
+
+
+Examples from McElreath's Statistical Rethinking translated directly into Stan code
+
+<https://github.com/ssp3nc3r/rethinking>
+
+基于贝叶斯推断的常见统计模型
+- LaplacesDemon: Complete Environment for Bayesian Inference
+-  <https://mirrors.tuna.tsinghua.edu.cn/CRAN/web/packages/LaplacesDemon/index.html>
+
+
+边际似然 Marginal Likelihood
+条件似然 conditional likelihood
+完全似然 complete Likelihood
+
+层次似然 Hierarchical likelihood
+部分似然 partial likelihood
+
+
+https://en.wikipedia.org/wiki/Quasi-maximum_likelihood_estimate
+
+https://en.wikipedia.org/wiki/Maximum_likelihood_estimation
+
+https://en.wikipedia.org/wiki/Likelihood_function
+
+剖面似然 Profile Likelihood
+限制似然 Restricted Likelihood 
+
+拟似然 Penalized Quasi-Likelihood/Marginal Quasi-Likelihood PQL/MQL
+
+分布 边际分布 条件分布
+
+似然 边际似然 条件似然
+

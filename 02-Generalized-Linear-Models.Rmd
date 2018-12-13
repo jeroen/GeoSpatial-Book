@@ -18,6 +18,21 @@ https://bookdown.org/rdpeng/advstatcomp/
 
 通过先回顾线性模型相关知识，过渡到广义线性模型
 
+简单回归模型与 rstan
+
+- [Bayesian regression with STAN: Part 1 normal regression](https://datascienceplus.com/bayesian-regression-with-stan-part-1-normal-regression/)
+- [Bayesian regression with STAN Part 2: Beyond normality](https://datascienceplus.com/bayesian-regression-with-stan-beyond-normality/)
+
+RStan: 泊松广义线性模型
+
+- https://stackoverflow.com/questions/50705949/implementing-exponential-general-linear-model-in-stan-rstan
+- generalized linear models, McMaster University (fall 2018) [website](https://bbolker.github.io/stat4c03/)
+
+- cglm: Fits Conditional Generalized Linear Models
+
+Estimates the ratio of the regression coefficients and the dispersion parameter in conditional generalized linear models for clustered data.
+
+
 ### 参数估计
 
 

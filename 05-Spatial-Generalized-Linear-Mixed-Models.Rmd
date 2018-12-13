@@ -45,8 +45,349 @@ https://mirrors.tuna.tsinghua.edu.cn/CRAN/web/packages/SolveRationalMatrixEquati
 
 解有理矩阵方程与高斯过程回国模型可能有关
 
+- FastGP: Efficiently Using Gaussian Processes with Rcpp and RcppEigen
+
+Contains Rcpp and RcppEigen implementations of matrix operations useful for Gaussian process models, such as the inversion of a symmetric Toeplitz matrix, sampling from multivariate normal distributions, evaluation of the log-density of a multivariate normal vector, and Bayesian inference for latent variable Gaussian process models with elliptical slice sampling (Murray, Adams, and MacKay 2010).
+
+- sgeostat: An Object-Oriented Framework for Geostatistical Modeling in S+
+
+An Object-oriented Framework for Geostatistical Modeling in S+ containing functions for variogram estimation, variogram fitting and kriging as well as some plot functions. Written entirely in S, therefore works only for small data sets in acceptable computing time.
+
+- sparseLTSEigen: RcppEigen back end for sparse least trimmed squares regression
+
+Use RcppEigen to fit least trimmed squares regression models with an L1 penalty in order to obtain sparse models.
+
+- hBayesDM: hierarchical Bayesian modeling of Decision-Making tasks 任务决策的贝叶斯分层建模 <https://github.com/CCS-Lab/hBayesDM> <https://rpubs.com/CCSL/hBayesDM> 
+
+- LaplacesDemon: Complete Environment for Bayesian Inference
+Provides a complete environment for Bayesian inference using a variety of different samplers (see ?LaplacesDemon for an overview). The README describes the history of the package development process.
+
+
 ## 应用 {#Real-Data-Analysis}
 
 Evangelos Evangelou 和 Vivekananda Roy （2018年）[@Evangelou_2018_Effective] 提出 Generalized Importance Sampling 估计 SGLMM 模型参数，分析了 ronglap 和 Rhizoctonia root rot 两个真实数据集。
 
 Yawen Guan 和 Murali Haran （2018年）[@Guan_2018_Projection] 提出 Projection-Based Approach 近似高维积分达到降维的目的。包含两个数据分析
+
+GLM’s for Spatial Data 
+
+- <https://rpubs.com/corey_sparks/111362>
+
+Bayesian Regression using the INLA Approximation 
+
+- <https://rpubs.com/corey_sparks/265648>
+- <https://rpubs.com/corey_sparks/168849>
+- <https://rpubs.com/corey_sparks/170843>
+
+Bayesian Multi-level Regression Models Using INLA
+
+- <https://rpubs.com/corey_sparks/132760>
+
+Bayesian Regression using INLA or Spatial Modeling with R-INLA
+
+- <https://rpubs.com/corey_sparks/127161>
+
+Spatial Regimes and Geographically Weighted Regression in R
+- <https://rpubs.com/corey_sparks/121993>
+
+Generalized Linear Modesl for Spatial Count data
+
+- <https://rpubs.com/corey_sparks/250410> 
+- <https://rpubs.com/corey_sparks/250388>
+
+Spatially Autoregressive Models 2
+- <https://rpubs.com/corey_sparks/250314>
+Spatially Autoregressive Models 1
+- <https://rpubs.com/corey_sparks/246342>
+
+Displaying time series, spatial and space-time data with R
+  
+https://oscarperpinan.github.io/
+  
+http://www.rspatial.org/ 
+  
+https://edzer.github.io/sp/ 
+
+- [LOO for non-factorized normal models](https://github.com/paul-buerkner/non-factorized-loo)
+- [Playing with negative binomial multilevel models in Stan](https://github.com/seananderson/negbin-stan)
+- [An Introduction to Greta](https://rviews.rstudio.com/2018/04/23/on-first-meeting-greta/) tensoflow and stan
+
+1. Bayesian Data Analysis <https://github.com/avehtari/BDA_R_demos>
+Bayesian Data Analysis, 3rd ed by Gelman, Carlin, Stern, Dunson, Vehtari, and Rubin (BDA3).
+
+3. An Introduction to State Space Time Series Analysis <https://github.com/sinhrks/stan-statespace>
+Stan models for state space time series
+
+4. Draft introduction to probability and inference aimed at the Stan manual. <https://github.com/betanalpha/stan_intro>
+
+5. [Bayesian Modeling using Stan](https://github.com/fonnesbeck/stan_workshop_2016)
+
+6. Define Stan models using glmer-style (lme4) formulas <https://github.com/rmcelreath/glmer2stan>
+
+7. [Examples of working and non-working models](https://github.com/sakrejda/stan-workshop)
+
+8. State space models (dynamic linear models, hidden Markov models) implemented in Stan
+<https://github.com/jrnold/ssmodels-in-stan>
+
+9. State Space Models in Stan <https://jrnold.github.io/ssmodels-in-stan/>
+
+10. Conditional autoregressive models in Stan <https://github.com/mbjoseph/CARstan>
+
+11. Implementation of B-Splines in Stan <https://github.com/milkha/Splines_in_Stan>
+
+12. 相依对数正态模型 <https://magesblog.com/post/correlated-lognormal-chain-ladder-model/>
+
+13. R package for Bayesian spatial and spatiotemporal GLMMs with possible extremes <https://github.com/seananderson/glmmfields>
+
+14. CompRandFld: Composite-Likelihood Based Analysis of Random Fields
+
+15. LatticeKrig: Multiresolution Kriging Based on Markov Random Fields
+ Methods for the interpolation of large spatial datasets.
+16. RandomFields: Simulation and Analysis of Random Fields
+ Methods for the inference on and the simulation of Gaussian fields are provided, as well as methods for the simulation of extreme value random fields.
+17. RandomFieldsUtils: Utilities for the Simulation and Analysis of Random Fields
+18. FieldSim: Random Fields (and Bridges) Simulations 
+Tools for random fields and bridges simulations.
+
+
+Geostatistical Analysis of Spatial Data
+
+- georob: Robust Geostatistical Analysis of Spatial Data
+- constrainedKriging: Constrained, Covariance-Matching Constrained and Universal Point or Block Kriging
+
+https://www.rspatial.org
+
+https://www.r-spatial.org
+
+https://gadm.org
+
+
+GADM wants to map the administrative areas of all countries, at all levels of sub-division. We use a high spatial resolution, and of a extensive set of attributes. This is a never ending project, but we are happy to share what we have. You can write us with questions and suggestions, using this contact form.
+
+ADMB 项目
+
+https://github.com/admb-project
+
+https://github.com/admb-project/admb-examples/tree/master/spatial-models
+https://github.com/bbolker/glmmadmb  glmmADMB 包
+
+
+- Machine Learning algorithms for spatial and spatiotemporal data <https://github.com/thengl/GeoMLA>
+
+大型空间数据集处理
+
+- http://ff.r-forge.r-project.org/
+- https://cran.r-project.org/web/packages/ff/index.html
+
+- 数据库 
+- QGIS
+
+例子 https://github.com/vertica/Vertica-Geospatial
+
+方法寻找
+
+- https://geocompr.robinlovelace.net
+
+```r
+object.size( numeric(1024^3*2.3/8) )/(1024*1024)
+```
+
+获取对象在R环境中的占用的空间 ， 2355.2 Mb, 大内存的使用注意 内存拷贝和释放 gc
+
+## rworldxtra: Country boundaries at high resolution
+
+高精度世界地图
+
+High resolution vector country boundaries derived from Natural Earth data, can be plotted in rworldmap.
+https://cran.r-project.org/web/packages/rworldxtra/index.html
+
+## Data Visualization & Dashboard
+
+### DESCRIZIONE
+
+Discover how to tell the story that lives in your data: using the most modern R tools for data visualization, learn how to build beautiful, effective and flexible plots. Then, step by step, discover how to embed visualizations and tables in a powerful Shinyapp, to make your data easily navigable and let their insights emerge.
+
+### Course organization
+
+The first day opens with a brief review of the graphic environment in R and of standard plots. It will then present the ggplot grammar of graphics, a grammar for creating nice and beautiful graphs.
+First, we provide the tools for building the most important kinds of plot: Scatter Plot, Line Plot, Histogram, Bar Plot, Box Plot, Surface Plot. Secondly, the course illustrates the advanced features of ggplot2 to deal with the most common plot customization questions: axes customisation, titles and legends, etc etc, as well as an overview of the ggplot family.
+During the second day you will learn about dashboards and interactive graphics with Shiny. Once the basics to understand the structure of a shiny dashboard are introduced, you will learn how to build a shiny dashboard from scratch using data provided by the instructor. Step by step you will be adding complexity to your dashboard so that you can fully tell the story behind the data.
+
+### Outline
+
+ ggplot2 grammar
+
+- Creating plots with ggplot (Scatter Plot, Line Plot, Bar Plot, Histogram, Box Plot, Surface Plot)
+- Customizing Plots (aesthetics, legend, axes, faceting and themes)
+- Specialised visualisation tools: ggmap and ggally
+- Basic shiny concepts
+- The structure of a shiny app
+- Shiny: the server side and the user side
+- Understanding reactivity in shiny
+- An overview of html widgets
+
+
+## R with Database & Big Data
+
+
+### DESCRIZIONE
+
+This course presents the latest techniques to work with big data within the R environment. This means manipulating, analysing, visualizing big data structures that exceed the single computer capacity in a true R
+style. The large amount of data available nowadays is a tangled and hidden source of knowledge. Being able to quickly and effectively unravel high value information from the vastness of data is the most powerful driver for success in this modern competitive market.
+During this course you will become familiar with the basic IT infrastructures behind big data, the R toolbox to access and manipulate big data structures, the sparkML libraries for out of memory data modeling and ad hoc techniques for big data visualization.
+
+### Course organization
+
+During the first day you will focus on accessing and manipulating databases. First, you will be given an introduction to databases and you will be given the details for connecting with them through R.
+Then you will be provided with the tools for manipulating data. More specifically, you will focus on the tools supplied in the tidyverse such as dplyr and tidyr.
+The second day is dedicated to distributed infrastructure. Again, after an introduction to distributed systems, such as Spark and Hadoop, you will learn how to deal with them through the tools provided by R.
+You will also learn about the sparkML libraries for out of memory data modeling and ad hoc techniques for big data visualization.
+
+### Outline
+
+- Introduction to databases
+- Connecting databases through R: ODBC and RSQLite
+- Data manipulation with dplyr
+- Using dplyr with databases
+- Introduction to distributed infrastructure
+- Spark and Hadoop
+- Sparklyr
+- Distributed data manipulation with dplyr
+- SparkML
+
+## dplyr 模糊SQL和R的界限
+
+### 介绍
+
+dplyr 由 Hadley Wickham 主要由开发和维护，是Rstudio公司开源的用于数据处理的一大利器，该包号称“数据操作的语法”，与ggplot2对应，也就是说数据处理那一套已经建立完整的和SQL一样的功能。它们都遵循同样的处理逻辑，只不过一个用SQL写，一个用R语言写，处理效率差不多，R语言写的SQL会被翻译为SQL语句，再传至数据库查询，当然它也支持内存内的数据操作。
+
+目前dplyr原生支持的数据库有：MySQL、PostgreSQL，SQLite
+
+此外，作为对dplyr的补充，dbplyr支持特定厂商的数据库
+
+- Microsoft SQL Server
+- Oracle
+- Apache Hive
+- Apache Impala
+- PostgreSQL
+
+开发版的 dbplyr 支持  Amazon Redshift 数据库
+
+除上之外的数据库，由 DBI 支持，如 clickhouse，只能像以前一样传SQL语句块
+
+### odbc
+
+```bash
+sudo apt-get install unixodbc-dev
+```
+
+### RMariaDB
+
+```bash
+sudo apt-get install -y libmysqlclient-dev
+sudo apt-get install -y libmariadb-client-lgpl-dev
+```
+
+### 举例
+
+作为学习的基础看看 dplyr 和 forcats 如何实现 SQL 语句查询
+
+- forcats 即 Tools for Working with Categorical Variables (Factors) 是专门处理分类数据的，常用函数 `fct_reorder`
+
+```r
+> ls('package:forcats')
+ [1] "%>%"             "as_factor"       "fct_anon"        "fct_c"          
+ [5] "fct_collapse"    "fct_count"       "fct_drop"        "fct_expand"     
+ [9] "fct_explicit_na" "fct_infreq"      "fct_inorder"     "fct_lump"       
+[13] "fct_other"       "fct_recode"      "fct_relabel"     "fct_relevel"    
+[17] "fct_reorder"     "fct_reorder2"    "fct_rev"         "fct_shift"      
+[21] "fct_shuffle"     "fct_unify"       "fct_unique"      "gss_cat"        
+[25] "lvls_expand"     "lvls_reorder"    "lvls_revalue"    "lvls_union"     
+```
+
+- https://github.com/rstudio/webinars/tree/master/46-tidyverse-visualisation-and-manipulation-basics
+- https://github.com/rstudio/webinars/blob/master/46-tidyverse-visualisation-and-manipulation-basics/00-Tidyverse-webinar.pdf
+
+pdf文件是PPT，其中ggplot2绘图过程的拆解值得一看
+
+gapminder 人口统计数据集 因 Hans Rosling’s TED 演讲而著名.
+```r
+library(gapminder)  # 加载数据集
+gapminder
+```
+- 工具 dplyr 和 forcats
+- dplyr 常用的函数是6个： `arrange` 排序 `filter` 过滤 `select` 选择 `mutate` 变异（可以理解为数据框要加入一列） `summarise` 汇总 `group_by` 分组
+- 目标 Which countries had the fastest growing GDP’s between 1952 and 2007? 看看哪个国家在1952-2007之间GDP增长最快
+
+```r
+gapminder %>% 
+  filter(country %in% top_10) %>% 
+  mutate(gdp = pop * gdpPercap) %>% 
+  group_by(country) %>% 
+  summarise(start = first(gdp), end = last(gdp)) %>% 
+  mutate(cagr = ((end/start) ^ (1 / 55) - 1) * 100) %>% 
+  arrange(desc(cagr)) %>% 
+  ggplot() +
+    geom_col(mapping = aes(x = fct_reorder(country, cagr), y = cagr)) +
+    labs(x = "Country", y = "Cumulative Annual Growth Rate in GDP (1952-2007)") +
+    coord_flip()
+```
+
+```r
+ls('package:dplyr') %>% length
+```
+共236个函数，包含上述材料未包含的 join union 等比较复杂的SQL操作
+
+```r
+grep('join',ls('package:dplyr'),value = T)
+[1] "anti_join"     "full_join"     "inner_join"    "left_join"     "right_join"   
+[6] "semi_join"     "sql_join"      "sql_semi_join"
+```
+
+### 与数据库连接的核心 DBI
+
+DBI 即 Database Interface 使用C/C++开发的底层数据库接口，是一个统一的关系型数据库连接框架，需要根据不同的具体的数据库进行实例化，才可使用
+
+
+### 参考资料
+
+- http://db.rstudio.com/
+- https://github.com/rstudio/db.rstudio.com
+- http://dplyr.tidyverse.org
+- https://github.com/tidyverse/dplyr
+- https://github.com/rstudio/webinars
+- https://github.com/rstudio/cheatsheets
+- https://github.com/hadley/dtplyr
+- https://github.com/tidyverse/dbplyr
+
+- [Create maps from SITG files with sf and ggplot2](https://xvrdm.github.io/2017/09/15/create-maps-from-sitg-files-with-sf-and-ggplot2/)
+
+
+## Professional R Programming
+
+### DESCRIZIONE
+
+If you wish to move forward from being a R user to become a R developer, it's time to take your programming skills to the next level. This course will give you an inner perspective of R working mechanisms, as well as tools for addressing your code's issues and to make it more efficient. Once these concepts are established, whether you work alone or in team, it is very important that your code is reproducible. You will learn how to create R packages and use them as the fundamental unit of reproducible R code.
+
+### Course organization
+
+During the first day you will quickly review the basic R objects followed by an explanation of more advanced R objects, such as environments, expression and calls. You will then analyze in details functions objects along with their structures with a focus on code clarity and style.
+R as a functional programming language including the use of functionals and the purrr package will close the first day.
+The second day will confront many topics. You will learn how to exploit modern computer architecture by learning about parallel computation. Furthermore, you will learn about efficient programming tools: testing, debugging and profiling. The course closes up with the explanation of R packages as a unit of reproducible code where you can include documentation and tests.
+
+### Outline
+
+- Base Programming: environments, functions and loops 
+- Functionals in base R
+- The purrr package
+- Code style and clarity
+- Profiling
+- Parallel computation
+- Testing and debugging
+- Documenting your code: rmarkdown
+- Sharing your code: github
+- R packages
+
+
+
+
