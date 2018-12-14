@@ -14,7 +14,7 @@ branches:
     - master
     - develop
 
-pandoc_version: 2.4
+pandoc_version: 2.3.1
 
 git:
   depth: 5
@@ -52,13 +52,12 @@ env:
 before_install:
   - mkdir ~/.R
   - cp Makevars ~/.R
-  - nvm install 8
-  - nvm use 8
+  - nvm install stable
   - npm install netlify-cli -g
   - curl -fLo /tmp/tinytex.tar.gz https://travis-bin.yihui.name/tinytex.tar.gz
-  - tar xzf /tmp/tinytex.tar.gz -C /$HOME
-  - export PATH=/$HOME/.TinyTeX/bin/x86_64-linux:$PATH
-  - Rscript -e 'if(!require(tinytex)) install.packages("tinytex");tinytex::tlmgr_install(readLines("latex/TeXLive.pkgs"))'
+  - tar xzf /tmp/tinytex.tar.gz -C $HOME
+  - export PATH=$HOME/.TinyTeX/bin/x86_64-linux:$PATH
+  - Rscript -e 'tinytex::tlmgr_install(readLines("latex/TeXLive.pkgs"))'
 
 before_script:
   - Rscript -e 'update.packages(lib.loc = .libPaths()[1], ask = FALSE)'
@@ -68,8 +67,6 @@ script:
 
 after_success:
   - make pdf
-#  - Rscript -e 'rmarkdown::render("notes/notesdown.Rmd",encoding = "UTF8")'
-#  - mv notes/notesdown.pdf _book/
 
 deploy:
   provider: script
