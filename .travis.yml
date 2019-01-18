@@ -1,6 +1,7 @@
 language: r
 r:
   - devel
+  - latest
 
 cache:
   packages: true
