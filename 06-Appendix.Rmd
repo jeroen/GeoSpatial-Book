@@ -2,7 +2,7 @@
 
 # (APPENDIX) 附录 {-}
 
-# 概率编程 {#probabilistic-programming-language}
+# 概率编程语言 Stan {#probabilistic-programming-language}
 
 概率编程语言，图模型，贝叶斯推断，马尔科夫链蒙特卡罗，汉密尔顿蒙特卡罗，随机模拟，抽样分布，贝叶斯定理，先验后验 
 
@@ -112,7 +112,6 @@ fit <- stan(
   seed = 2018
 )
 ```
-
 
 输出结果
 

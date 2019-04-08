@@ -3,11 +3,12 @@ MAINTAINER Xiangyun Huang xiangyunfaith@outlook.com
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    gcc-6 \
     g++-6 \
     libnlopt-dev \
   && mkdir ~/.R \
-  && wget -P ~/.R https://raw.githubusercontent.com/XiangyunHuang/GeoSpatial-Book/master/Makevars \
+  && echo "CXXFLAGS += -Wno-ignored-attributes" >> ~/.R/Makevars \
+  && echo "CXX14 = g++-6 -fPIC -flto=2" >> ~/.R/Makevars \
+  && echo "CXX14FLAGS = -mtune=native -march=native -Wno-unused-variable -Wno-unused-function -Wno-unused-local-typedefs -Wno-ignored-attributes -Wno-deprecated-declarations -Wno-attributes -O3" >> ~/.R/Makevars \
   && install2.r --error \
     leaflet \
     rstan \
