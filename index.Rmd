@@ -2,7 +2,7 @@
 title: "空间数据分析与建模"
 subtitle: "GeoSpatial Data Visualization, Analysis and Modeling in R"
 author: "黄湘云"
-date: "2018年10月26日"
+date: "2019年4月8日"
 site: bookdown::bookdown_site
 documentclass: book
 papersize: b5
