@@ -27,25 +27,32 @@ github-repo: XiangyunHuang/GeoSpatial-Book
 #cover-image: images/cover.png
 ---
 
-\mainmatter
+`r if (knitr::is_latex_output()) '<!--'` 
+
+```{r setup,include=FALSE}
+packages = desc::desc_get_deps()$package
+lapply(packages, function(pkg) {
+  if (system.file(package = pkg) == '') install.packages(pkg)
+})
+```
 
 # 前言 {#preface .unnumbered}
-\chaptermark{前言}
+
 \index{TinyTeX}
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
 
-The **bookdown** package can be installed from CRAN or Github:
+::: sidebar
+1. 数据变形者
+1. 统计图形
+1. 数据导入导出
+1. R 语言数据处理和正则表达式
+1. 自然语言处理与 Python 实现
+1. 容器技术与 Docker
+1. 数据结构与算法基础C++
+1. 常用机器学习算法与kaggle项目实战
+:::
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
-
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
-
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
 
 ## 获取帮助 {#Getting-Help-with-R .unnumbered}
 
@@ -57,10 +64,44 @@ https://www.r-project.org/help.html
 
 [rseek]: https://rseek.org/
 
-## 约定 {#colophon .unnumbered}
-\index{Pandoc}
+## 后记 {#colophon}
 
-这本书在 RStudio 里用 bookdown 写作。网站托管在 Netlify 上，Github 的每次提交都会触发 Travis CI 重新编译源码书稿，编译成功后，自动推送到 Netlify 上，网站会随之更新。书籍的源代码存放在 Github 上。书中显示代码的字体是 [Source Code Pro](https://github.com/silkeh/latex-sourcecodepro) 
+书籍源文件托管在 Github 上，每一次提交 Commit 触发 Travis 编译 R Markdown 文件，生成的网页由 Netlify 自动部署。编译环境是 `r R.version.string` 以及 R 包。
+
+```{r sessioninfo,echo=TRUE}
+sessioninfo::package_info(pkgs = desc::desc_get_deps()$package)
+```
+
+本书采用的写作平台是 Rocker 项目的容器环境
+
+```{bash,eval=F}
+docker pull rocker/geospatial
+docker run --name geo -d -p 8282:8080 -e ROOT=TRUE \
+   -e USER=rstudio -e PASSWORD=cloud rocker/geospatial
+```
+
+将主机端口 8282 映射给虚拟机/容器的 8080 端口，RStudio Server 默认使用的端口是 8787，因此改为 8080。首先进入容器
+
+```{bash,eval=F}
+docker exec -it geo /bin/bash
+```
+
+在 `/etc/rstudio/rserver.conf` 文件中添加 `www-port=8080`，之后重启 RStudio Server，再在浏览器中登陆网址 <http://ip-addr:8282>，而 ip-addr 可在容器中运行 `ip addr` 命令获得
+
+```{bash,eval=F}
+# 启动虚拟机 default
+docker-machine start default
+# 登陆虚拟机内的 default 
+docker-machine ssh default
+# 启动容器
+docker start geo
+# 关闭容器
+docker stop geo
+# 关闭虚拟机 default
+docker-machine stop default
+```
+
+更多 docker 操作，请看 [链接](https://notesdown.netlify.com/container.html#docker-machine)
 
 ```{r include=FALSE,cache=FALSE}
 # automatically create a bib database for R packages
@@ -69,3 +110,4 @@ knitr::write_bib(c(
 ), "latex/packages.bib")
 ```
 
+`r if (knitr::is_latex_output()) '-->'`
