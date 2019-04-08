@@ -215,27 +215,4 @@ points(elevation,
 [install-on-win]: https://github.com/stan-dev/rstan/wiki/Using-RStan-with-the-R-3.6.0-Prerelease-on-Windows
 [cartogram]: https://github.com/sjewo/cartogram
 
-## 控制台信息 {#rsession-info}
 
-编译书籍的 R Markdown 源文件需要如下版本的 R 软件、扩展包和文档转化器 Pandoc。
-
-```{r session, echo=TRUE}
-xfun::session_info(packages = c(
-  "rstan", "ggplot2", "sf"
-))
-```
-```{r}
-ruler <- function(width = getOption("width")) {
-  x <- seq_len(width)
-  y <- dplyr::case_when(
-    x %% 10 == 0 ~ as.character((x %/% 10) %% 10),
-    x %% 5 == 0  ~ "+",
-    TRUE         ~ "-"
-  )
-  cat(y, "\n", sep = "")
-  cat(x %% 10, "\n", sep = "")
-}
-```
-```{r,echo=TRUE}
-ruler()
-```

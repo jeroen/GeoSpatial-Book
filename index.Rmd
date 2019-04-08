@@ -64,7 +64,7 @@ https://www.r-project.org/help.html
 
 [rseek]: https://rseek.org/
 
-## 后记 {#colophon}
+## 后记 {#colophon .unnumbered}
 
 书籍源文件托管在 Github 上，每一次提交 Commit 触发 Travis 编译 R Markdown 文件，生成的网页由 Netlify 自动部署。编译环境是 `r R.version.string` 以及 R 包。
 
@@ -108,6 +108,21 @@ docker-machine stop default
 knitr::write_bib(c(
   .packages(), "rstan"
 ), "latex/packages.bib")
+```
+```{r}
+ruler <- function(width = getOption("width")) {
+  x <- seq_len(width)
+  y <- dplyr::case_when(
+    x %% 10 == 0 ~ as.character((x %/% 10) %% 10),
+    x %% 5 == 0  ~ "+",
+    TRUE         ~ "-"
+  )
+  cat(y, "\n", sep = "")
+  cat(x %% 10, "\n", sep = "")
+}
+```
+```{r,echo=TRUE}
+ruler()
 ```
 
 `r if (knitr::is_latex_output()) '-->'`

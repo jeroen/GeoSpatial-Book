@@ -1,9 +1,7 @@
-Package: GeoSpatial
+Package: placeholder
 Type: Book
 Title: GeoSpatial Data Visualization, Analysis and Modeling in R.
 Version: 0.0.0.9999
-Depends: 
-    R (>= 3.5.0)
 Imports: 
   bookdown,
   dplyr,
