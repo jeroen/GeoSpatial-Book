@@ -15,33 +15,10 @@ https://bookdown.org/ajkurz/Statistical_Rethinking_recoded/
 
 条件自回归 [CARstan](https://github.com/mbjoseph/CARstan) 实现零过多/膨胀数据特征的模型 混合二项/泊松/正态分布，自定义响应变量的分布 [Define custom response distributions with brms][custom-brms]
 
-Stan 使用的注意点
-
-QR 分解 The QR Decomposition For Regression Models
-http://mc-stan.org/users/documentation/case-studies/qr_regression.html
-
-典型集和维数灾难 Typical Sets and the Curse of Dimensionality  待翻译
-http://mc-stan.org/users/documentation/case-studies/curse-dims.html
-
-重参数对点估计的影响 The Impact of Reparameterization on Point Estimates
-http://mc-stan.org/users/documentation/case-studies/mle-params.html
-
-
-池化作用 Hierarchical Partial Pooling for Repeated Binary Trials
-http://mc-stan.org/users/documentation/case-studies/pool-binary-trials.html
-
-弱信息先验如何影响推断 How the Shape of a Weakly Informative Prior Affects Inferences
-http://mc-stan.org/users/documentation/case-studies/weakly_informative_shapes.html
-
-基于诊断的推断
-Diagnosing Biased Inference with Divergences
-http://mc-stan.org/users/documentation/case-studies/divergences_and_bias.html
 
 ## Stan 简介 {#intro-stan}
 
 何为 Stan [@Stan_2018_Bayesian] RStan [@R-rstan] 是 Stan 的 R 语言接口 [如何在 Windows 上安装 rstan][install-on-win] 
-
-
 
 设置参数
 
@@ -162,9 +139,6 @@ pairs(fit, pars = c("mu", "tau", "lp__"), log = TRUE)
 
 空间线性混合效应模型：是一个线性模型，认为随机效应来自空间高斯过程，混合效应指的是固定效应和随机效应，其中固定效应可以直接观察到，而随机效应不能直接观察到。
 
-spTimer: Spatio-Temporal Bayesian Modelling
-
-Fits, spatially predicts and temporally forecasts large amounts of space-time data using [1] Bayesian Gaussian Process (GP) Models, [2] Bayesian Auto-Regressive (AR) Models, and [3] Bayesian Gaussian Predictive Processes (GPP) based AR Models for spatio-temporal big-n problems. Bakar and Sahu (2015) <doi:10.18637/jss.v063.i15>.
 
 空间高斯过程回归：认为数据由空间高斯过程产生
 

@@ -16,51 +16,6 @@
 
 ## 可加模型 {#Additive-Models}
 
-广义可加混合效应模型 Generalized additive (mixed) models
-
-- Repo for tutorial/paper on mixed-effect GAMs (General Additive Models with Mixed-Effect Smooths) <https://github.com/noamross/mixed-effect-gams>
-
-- gamm4: Generalized Additive Mixed Models using 'mgcv' and 'lme4'
-
-Estimate generalized additive mixed models via a version of function gamm() from 'mgcv', using 'lme4' for estimation.
-
-- mgcv: Mixed GAM Computation Vehicle with Automatic Smoothness Estimation
-
-Generalized additive (mixed) models, some of their extensions and other generalized ridge regression with multiple smoothing parameter estimation by (Restricted) Marginal Likelihood, Generalized Cross Validation and similar. Includes a gam() function, a wide variety of smoothers, JAGS support and distributions beyond the exponential family.
-
-- CAST: 'caret' Applications for Spatial-Temporal Models
-
-Supporting functionality to run 'caret' with spatial or spatial-temporal data. 'caret' is a frequently used package for model training and prediction using machine learning. This package includes functions to improve spatial-temporal modelling tasks using 'caret'. It prepares data for Leave-Location-Out and Leave-Time-Out cross-validation which are target-oriented validation strategies for spatial-temporal models. To decrease overfitting and improve model performances, the package implements a forward feature selection that selects suitable predictor variables in view to their contribution to the target-oriented performance.
-
-https://github.com/environmentalinformatics-marburg/CAST
-https://cran.r-project.org/web/packages/CAST/vignettes/CAST-intro.html
-
-spaMM: Mixed-Effect Models, Particularly Spatial Models
-
-https://kimura.univ-montp2.fr/~rousset/spaMM.htm
-
-Inference based on mixed-effect models, including generalized linear mixed models with spatial correlations and models with non-Gaussian random effects (e.g., Beta). Variation in residual variance (heteroscedasticity) can itself be represented by a generalized linear mixed model. Various approximations of likelihood or restricted likelihood are implemented, in particular h-likelihood (Lee and Nelder 2001 <doi:10.1093/biomet/88.4.987>) and Laplace approximation.
-
-https://mirrors.tuna.tsinghua.edu.cn/CRAN/web/packages/SolveRationalMatrixEquation/index.html
-
-解有理矩阵方程与高斯过程回国模型可能有关
-
-- FastGP: Efficiently Using Gaussian Processes with Rcpp and RcppEigen
-
-Contains Rcpp and RcppEigen implementations of matrix operations useful for Gaussian process models, such as the inversion of a symmetric Toeplitz matrix, sampling from multivariate normal distributions, evaluation of the log-density of a multivariate normal vector, and Bayesian inference for latent variable Gaussian process models with elliptical slice sampling (Murray, Adams, and MacKay 2010).
-
-- sgeostat: An Object-Oriented Framework for Geostatistical Modeling in S+
-
-An Object-oriented Framework for Geostatistical Modeling in S+ containing functions for variogram estimation, variogram fitting and kriging as well as some plot functions. Written entirely in S, therefore works only for small data sets in acceptable computing time.
-
-- sparseLTSEigen: RcppEigen back end for sparse least trimmed squares regression
-
-Use RcppEigen to fit least trimmed squares regression models with an L1 penalty in order to obtain sparse models.
-
-- hBayesDM: hierarchical Bayesian modeling of Decision-Making tasks 任务决策的贝叶斯分层建模 <https://github.com/CCS-Lab/hBayesDM> <https://rpubs.com/CCSL/hBayesDM> 
-
-- LaplacesDemon: Complete Environment for Bayesian Inference
-Provides a complete environment for Bayesian inference using a variety of different samplers (see ?LaplacesDemon for an overview). The README describes the history of the package development process.
 
 
 ## 应用 {#Real-Data-Analysis}
@@ -69,137 +24,17 @@ Evangelos Evangelou 和 Vivekananda Roy （2018年）[@Evangelou_2018_Effective]
 
 Yawen Guan 和 Murali Haran （2018年）[@Guan_2018_Projection] 提出 Projection-Based Approach 近似高维积分达到降维的目的。包含两个数据分析
 
-GLM’s for Spatial Data 
-
-- <https://rpubs.com/corey_sparks/111362>
-
-Bayesian Regression using the INLA Approximation 
-
-- <https://rpubs.com/corey_sparks/265648>
-- <https://rpubs.com/corey_sparks/168849>
-- <https://rpubs.com/corey_sparks/170843>
-
-Bayesian Multi-level Regression Models Using INLA
-
-- <https://rpubs.com/corey_sparks/132760>
-
-Bayesian Regression using INLA or Spatial Modeling with R-INLA
-
-- <https://rpubs.com/corey_sparks/127161>
-
-Spatial Regimes and Geographically Weighted Regression in R
-- <https://rpubs.com/corey_sparks/121993>
-
-Generalized Linear Modesl for Spatial Count data
-
-- <https://rpubs.com/corey_sparks/250410> 
-- <https://rpubs.com/corey_sparks/250388>
-
-Spatially Autoregressive Models 2
-- <https://rpubs.com/corey_sparks/250314>
-Spatially Autoregressive Models 1
-- <https://rpubs.com/corey_sparks/246342>
-
-Displaying time series, spatial and space-time data with R
-  
-https://oscarperpinan.github.io/
-  
-http://www.rspatial.org/ 
-  
-https://edzer.github.io/sp/ 
-
-- [LOO for non-factorized normal models](https://github.com/paul-buerkner/non-factorized-loo)
-- [Playing with negative binomial multilevel models in Stan](https://github.com/seananderson/negbin-stan)
-- [An Introduction to Greta](https://rviews.rstudio.com/2018/04/23/on-first-meeting-greta/) tensoflow and stan
-
-1. Bayesian Data Analysis <https://github.com/avehtari/BDA_R_demos>
-Bayesian Data Analysis, 3rd ed by Gelman, Carlin, Stern, Dunson, Vehtari, and Rubin (BDA3).
-
-3. An Introduction to State Space Time Series Analysis <https://github.com/sinhrks/stan-statespace>
-Stan models for state space time series
-
-4. Draft introduction to probability and inference aimed at the Stan manual. <https://github.com/betanalpha/stan_intro>
-
-5. [Bayesian Modeling using Stan](https://github.com/fonnesbeck/stan_workshop_2016)
-
-6. Define Stan models using glmer-style (lme4) formulas <https://github.com/rmcelreath/glmer2stan>
-
-7. [Examples of working and non-working models](https://github.com/sakrejda/stan-workshop)
-
-8. State space models (dynamic linear models, hidden Markov models) implemented in Stan
-<https://github.com/jrnold/ssmodels-in-stan>
-
-9. State Space Models in Stan <https://jrnold.github.io/ssmodels-in-stan/>
-
-10. Conditional autoregressive models in Stan <https://github.com/mbjoseph/CARstan>
-
-11. Implementation of B-Splines in Stan <https://github.com/milkha/Splines_in_Stan>
-
-12. 相依对数正态模型 <https://magesblog.com/post/correlated-lognormal-chain-ladder-model/>
-
-13. R package for Bayesian spatial and spatiotemporal GLMMs with possible extremes <https://github.com/seananderson/glmmfields>
-
-14. CompRandFld: Composite-Likelihood Based Analysis of Random Fields
-
-15. LatticeKrig: Multiresolution Kriging Based on Markov Random Fields
- Methods for the interpolation of large spatial datasets.
-16. RandomFields: Simulation and Analysis of Random Fields
- Methods for the inference on and the simulation of Gaussian fields are provided, as well as methods for the simulation of extreme value random fields.
-17. RandomFieldsUtils: Utilities for the Simulation and Analysis of Random Fields
-18. FieldSim: Random Fields (and Bridges) Simulations 
-Tools for random fields and bridges simulations.
-
-
-Geostatistical Analysis of Spatial Data
-
-- georob: Robust Geostatistical Analysis of Spatial Data
-- constrainedKriging: Constrained, Covariance-Matching Constrained and Universal Point or Block Kriging
-
-https://www.rspatial.org
-
-https://www.r-spatial.org
-
-https://gadm.org
-
-
-GADM wants to map the administrative areas of all countries, at all levels of sub-division. We use a high spatial resolution, and of a extensive set of attributes. This is a never ending project, but we are happy to share what we have. You can write us with questions and suggestions, using this contact form.
-
-ADMB 项目
-
-https://github.com/admb-project
-
-https://github.com/admb-project/admb-examples/tree/master/spatial-models
-https://github.com/bbolker/glmmadmb  glmmADMB 包
-
-
-- Machine Learning algorithms for spatial and spatiotemporal data <https://github.com/thengl/GeoMLA>
-
 大型空间数据集处理
 
 - http://ff.r-forge.r-project.org/
 - https://cran.r-project.org/web/packages/ff/index.html
 
-- 数据库 
-- QGIS
-
-例子 https://github.com/vertica/Vertica-Geospatial
-
-方法寻找
-
-- https://geocompr.robinlovelace.net
 
 ```r
 object.size( numeric(1024^3*2.3/8) )/(1024*1024)
 ```
 
 获取对象在R环境中的占用的空间 ， 2355.2 Mb, 大内存的使用注意 内存拷贝和释放 gc
-
-## rworldxtra: Country boundaries at high resolution
-
-高精度世界地图
-
-High resolution vector country boundaries derived from Natural Earth data, can be plotted in rworldmap.
-https://cran.r-project.org/web/packages/rworldxtra/index.html
 
 ## Data Visualization & Dashboard
 
@@ -255,39 +90,6 @@ You will also learn about the sparkML libraries for out of memory data modeling 
 - Distributed data manipulation with dplyr
 - SparkML
 
-## dplyr 模糊SQL和R的界限
-
-### 介绍
-
-dplyr 由 Hadley Wickham 主要由开发和维护，是Rstudio公司开源的用于数据处理的一大利器，该包号称“数据操作的语法”，与ggplot2对应，也就是说数据处理那一套已经建立完整的和SQL一样的功能。它们都遵循同样的处理逻辑，只不过一个用SQL写，一个用R语言写，处理效率差不多，R语言写的SQL会被翻译为SQL语句，再传至数据库查询，当然它也支持内存内的数据操作。
-
-目前dplyr原生支持的数据库有：MySQL、PostgreSQL，SQLite
-
-此外，作为对dplyr的补充，dbplyr支持特定厂商的数据库
-
-- Microsoft SQL Server
-- Oracle
-- Apache Hive
-- Apache Impala
-- PostgreSQL
-
-开发版的 dbplyr 支持  Amazon Redshift 数据库
-
-除上之外的数据库，由 DBI 支持，如 clickhouse，只能像以前一样传SQL语句块
-
-### odbc
-
-```bash
-sudo apt-get install unixodbc-dev
-```
-
-### RMariaDB
-
-```bash
-sudo apt-get install -y libmysqlclient-dev
-sudo apt-get install -y libmariadb-client-lgpl-dev
-```
-
 ### 举例
 
 作为学习的基础看看 dplyr 和 forcats 如何实现 SQL 语句查询
@@ -305,18 +107,18 @@ sudo apt-get install -y libmariadb-client-lgpl-dev
 [25] "lvls_expand"     "lvls_reorder"    "lvls_revalue"    "lvls_union"     
 ```
 
-- https://github.com/rstudio/webinars/tree/master/46-tidyverse-visualisation-and-manipulation-basics
 - https://github.com/rstudio/webinars/blob/master/46-tidyverse-visualisation-and-manipulation-basics/00-Tidyverse-webinar.pdf
 
 pdf文件是PPT，其中ggplot2绘图过程的拆解值得一看
 
 gapminder 人口统计数据集 因 Hans Rosling’s TED 演讲而著名.
+
 ```r
 library(gapminder)  # 加载数据集
 gapminder
 ```
+
 - 工具 dplyr 和 forcats
-- dplyr 常用的函数是6个： `arrange` 排序 `filter` 过滤 `select` 选择 `mutate` 变异（可以理解为数据框要加入一列） `summarise` 汇总 `group_by` 分组
 - 目标 Which countries had the fastest growing GDP’s between 1952 and 2007? 看看哪个国家在1952-2007之间GDP增长最快
 
 ```r
@@ -336,6 +138,7 @@ gapminder %>%
 ```r
 ls('package:dplyr') %>% length
 ```
+
 共236个函数，包含上述材料未包含的 join union 等比较复杂的SQL操作
 
 ```r
@@ -344,23 +147,6 @@ grep('join',ls('package:dplyr'),value = T)
 [6] "semi_join"     "sql_join"      "sql_semi_join"
 ```
 
-### 与数据库连接的核心 DBI
-
-DBI 即 Database Interface 使用C/C++开发的底层数据库接口，是一个统一的关系型数据库连接框架，需要根据不同的具体的数据库进行实例化，才可使用
-
-
-### 参考资料
-
-- http://db.rstudio.com/
-- https://github.com/rstudio/db.rstudio.com
-- http://dplyr.tidyverse.org
-- https://github.com/tidyverse/dplyr
-- https://github.com/rstudio/webinars
-- https://github.com/rstudio/cheatsheets
-- https://github.com/hadley/dtplyr
-- https://github.com/tidyverse/dbplyr
-
-- [Create maps from SITG files with sf and ggplot2](https://xvrdm.github.io/2017/09/15/create-maps-from-sitg-files-with-sf-and-ggplot2/)
 
 
 ## Professional R Programming
@@ -387,7 +173,3 @@ The second day will confront many topics. You will learn how to exploit modern c
 - Documenting your code: rmarkdown
 - Sharing your code: github
 - R packages
-
-
-
-

@@ -35,8 +35,138 @@
 - [Reproducible road safety research: an exploration of the shifting spatial and temporal distribution of car-pedestrian crashes](https://github.com/Robinlovelace/stats19-gisruk)
 - [出租车地理信息可视化](https://data-se.netlify.com/2017/11/20/great-dataviz-examples-in-rstats/)
 - 地理数据分析和建模 [Spatial Data Science with R](https://www.rspatial.org/) raster 包 Geographic Data Analysis and Modeling 
+- [Create maps from SITG files with sf and ggplot2](https://xvrdm.github.io/2017/09/15/create-maps-from-sitg-files-with-sf-and-ggplot2/)
+- ADMB 项目 https://github.com/admb-project 应用于空间模型 https://github.com/admb-project/admb-examples/tree/master/spatial-models
+- glmmADMB 包 https://github.com/bbolker/glmmadmb 
+- Machine Learning algorithms for spatial and spatiotemporal data <https://github.com/thengl/GeoMLA>
+- Vertica-Geospatial Examples https://github.com/vertica/Vertica-Geospatial
 
 
+- [LOO for non-factorized normal models](https://github.com/paul-buerkner/non-factorized-loo)
+- [Playing with negative binomial multilevel models in Stan](https://github.com/seananderson/negbin-stan)
+- [An Introduction to Greta](https://rviews.rstudio.com/2018/04/23/on-first-meeting-greta/) tensoflow and stan
+- Bayesian Data Analysis <https://github.com/avehtari/BDA_R_demos> Bayesian Data Analysis, 3rd ed by Gelman, Carlin, Stern, Dunson, Vehtari, and Rubin (BDA3).
+- An Introduction to State Space Time Series Analysis <https://github.com/sinhrks/stan-statespace> Stan models for state space time series
+- Draft introduction to probability and inference aimed at the Stan manual. <https://github.com/betanalpha/stan_intro>
+- [Bayesian Modeling using Stan](https://github.com/fonnesbeck/stan_workshop_2016)
+- Define Stan models using glmer-style (lme4) formulas <https://github.com/rmcelreath/glmer2stan>
+- [Examples of working and non-working models](https://github.com/sakrejda/stan-workshop)
+- State space models (dynamic linear models, hidden Markov models) implemented in Stan
+<https://github.com/jrnold/ssmodels-in-stan>
+- State Space Models in Stan <https://jrnold.github.io/ssmodels-in-stan/>
+- Conditional autoregressive models in Stan <https://github.com/mbjoseph/CARstan>
+- Implementation of B-Splines in Stan <https://github.com/milkha/Splines_in_Stan>
+- 相依对数正态模型 <https://magesblog.com/post/correlated-lognormal-chain-ladder-model/>
+
+- glmmfields: R package for Bayesian spatial and spatiotemporal GLMMs with possible extremes <https://github.com/seananderson/glmmfields>
+- CompRandFld: Composite-Likelihood Based Analysis of Random Fields
+
+Geostatistical Analysis of Spatial Data
+
+- LatticeKrig: Multiresolution Kriging Based on Markov Random Fields. Methods for the interpolation of large spatial datasets.
+- RandomFields: Simulation and Analysis of Random Fields. Methods for the inference on and the simulation of Gaussian fields are provided, as well as methods for the simulation of extreme value random fields.
+- RandomFieldsUtils: Utilities for the Simulation and Analysis of Random Fields
+- FieldSim: Random Fields (and Bridges) Simulations. Tools for random fields and bridges simulations.
+- georob: Robust Geostatistical Analysis of Spatial Data
+- constrainedKriging: Constrained, Covariance-Matching Constrained and Universal Point or Block Kriging
+
+
+GLM’s for Spatial Data 
+
+- <https://rpubs.com/corey_sparks/111362>
+
+Bayesian Regression using the INLA Approximation 
+
+- <https://rpubs.com/corey_sparks/265648>
+- <https://rpubs.com/corey_sparks/168849>
+- <https://rpubs.com/corey_sparks/170843>
+
+Bayesian Multi-level Regression Models Using INLA
+
+- <https://rpubs.com/corey_sparks/132760>
+
+Bayesian Regression using INLA or Spatial Modeling with R-INLA
+
+- <https://rpubs.com/corey_sparks/127161>
+
+Spatial Regimes and Geographically Weighted Regression in R
+- <https://rpubs.com/corey_sparks/121993>
+
+Generalized Linear Modesl for Spatial Count data
+
+- <https://rpubs.com/corey_sparks/250410> 
+- <https://rpubs.com/corey_sparks/250388>
+
+Spatially Autoregressive Models 2
+- <https://rpubs.com/corey_sparks/250314>
+
+Spatially Autoregressive Models 1
+- <https://rpubs.com/corey_sparks/246342>
+
+- [Displaying time series, spatial and space-time data with R](https://oscarperpinan.github.io/)
+  
+广义可加混合效应模型 Generalized additive (mixed) models
+
+- Repo for tutorial/paper on mixed-effect GAMs (General Additive Models with Mixed-Effect Smooths) <https://github.com/noamross/mixed-effect-gams>
+
+- gamm4: Generalized Additive Mixed Models using 'mgcv' and 'lme4'
+
+Estimate generalized additive mixed models via a version of function gamm() from 'mgcv', using 'lme4' for estimation.
+
+- mgcv: Mixed GAM Computation Vehicle with Automatic Smoothness Estimation
+
+Generalized additive (mixed) models, some of their extensions and other generalized ridge regression with multiple smoothing parameter estimation by (Restricted) Marginal Likelihood, Generalized Cross Validation and similar. Includes a gam() function, a wide variety of smoothers, JAGS support and distributions beyond the exponential family.
+
+- CAST: 'caret' Applications for Spatial-Temporal Models
+
+Supporting functionality to run 'caret' with spatial or spatial-temporal data. 'caret' is a frequently used package for model training and prediction using machine learning. This package includes functions to improve spatial-temporal modelling tasks using 'caret'. It prepares data for Leave-Location-Out and Leave-Time-Out cross-validation which are target-oriented validation strategies for spatial-temporal models. To decrease overfitting and improve model performances, the package implements a forward feature selection that selects suitable predictor variables in view to their contribution to the target-oriented performance.
+
+https://github.com/environmentalinformatics-marburg/CAST
+https://cran.r-project.org/web/packages/CAST/vignettes/CAST-intro.html
+
+- spaMM: Mixed-Effect Models, Particularly Spatial Models
+
+https://kimura.univ-montp2.fr/~rousset/spaMM.htm
+
+Inference based on mixed-effect models, including generalized linear mixed models with spatial correlations and models with non-Gaussian random effects (e.g., Beta). Variation in residual variance (heteroscedasticity) can itself be represented by a generalized linear mixed model. Various approximations of likelihood or restricted likelihood are implemented, in particular h-likelihood (Lee and Nelder 2001 <doi:10.1093/biomet/88.4.987>) and Laplace approximation.
+
+https://mirrors.tuna.tsinghua.edu.cn/CRAN/web/packages/SolveRationalMatrixEquation/index.html
+
+解有理矩阵方程与高斯过程回归模型可能有关
+
+- FastGP: Efficiently Using Gaussian Processes with Rcpp and RcppEigen
+
+Contains Rcpp and RcppEigen implementations of matrix operations useful for Gaussian process models, such as the inversion of a symmetric Toeplitz matrix, sampling from multivariate normal distributions, evaluation of the log-density of a multivariate normal vector, and Bayesian inference for latent variable Gaussian process models with elliptical slice sampling (Murray, Adams, and MacKay 2010).
+
+- sgeostat: An Object-Oriented Framework for Geostatistical Modeling in S+
+
+An Object-oriented Framework for Geostatistical Modeling in S+ containing functions for variogram estimation, variogram fitting and kriging as well as some plot functions. Written entirely in S, therefore works only for small data sets in acceptable computing time.
+
+- sparseLTSEigen: RcppEigen back end for sparse least trimmed squares regression
+
+Use RcppEigen to fit least trimmed squares regression models with an L1 penalty in order to obtain sparse models.
+
+- hBayesDM: hierarchical Bayesian modeling of Decision-Making tasks 任务决策的贝叶斯分层建模 <https://github.com/CCS-Lab/hBayesDM> <https://rpubs.com/CCSL/hBayesDM> 
+
+- LaplacesDemon: Complete Environment for Bayesian Inference
+Provides a complete environment for Bayesian inference using a variety of different samplers (see ?LaplacesDemon for an overview). The README describes the history of the package development process.
+
+  
+https://www.rspatial.org/ 
+  
+https://edzer.github.io/sp/ 
+
+https://www.rspatial.org
+
+https://www.r-spatial.org
+
+
+高精度世界地图 rworldxtra: Country boundaries at high resolution
+High resolution vector country boundaries derived from Natural Earth data, can be plotted in rworldmap. https://cran.r-project.org/web/packages/rworldxtra/index.html
+
+https://gadm.org
+
+GADM wants to map the administrative areas of all countries, at all levels of sub-division. We use a high spatial resolution, and of a extensive set of attributes. This is a never ending project, but we are happy to share what we have. You can write us with questions and suggestions, using this contact form.
 
 
 ## 运行环境
