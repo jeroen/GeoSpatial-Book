@@ -41,26 +41,6 @@
 - Machine Learning algorithms for spatial and spatiotemporal data <https://github.com/thengl/GeoMLA>
 - Vertica-Geospatial Examples https://github.com/vertica/Vertica-Geospatial
 
-
-- [LOO for non-factorized normal models](https://github.com/paul-buerkner/non-factorized-loo)
-- [Playing with negative binomial multilevel models in Stan](https://github.com/seananderson/negbin-stan)
-- [An Introduction to Greta](https://rviews.rstudio.com/2018/04/23/on-first-meeting-greta/) tensoflow and stan
-- Bayesian Data Analysis <https://github.com/avehtari/BDA_R_demos> Bayesian Data Analysis, 3rd ed by Gelman, Carlin, Stern, Dunson, Vehtari, and Rubin (BDA3).
-- An Introduction to State Space Time Series Analysis <https://github.com/sinhrks/stan-statespace> Stan models for state space time series
-- Draft introduction to probability and inference aimed at the Stan manual. <https://github.com/betanalpha/stan_intro>
-- [Bayesian Modeling using Stan](https://github.com/fonnesbeck/stan_workshop_2016)
-- Define Stan models using glmer-style (lme4) formulas <https://github.com/rmcelreath/glmer2stan>
-- [Examples of working and non-working models](https://github.com/sakrejda/stan-workshop)
-- State space models (dynamic linear models, hidden Markov models) implemented in Stan
-<https://github.com/jrnold/ssmodels-in-stan>
-- State Space Models in Stan <https://jrnold.github.io/ssmodels-in-stan/>
-- Conditional autoregressive models in Stan <https://github.com/mbjoseph/CARstan>
-- Implementation of B-Splines in Stan <https://github.com/milkha/Splines_in_Stan>
-- 相依对数正态模型 <https://magesblog.com/post/correlated-lognormal-chain-ladder-model/>
-
-- glmmfields: R package for Bayesian spatial and spatiotemporal GLMMs with possible extremes <https://github.com/seananderson/glmmfields>
-- CompRandFld: Composite-Likelihood Based Analysis of Random Fields
-
 Geostatistical Analysis of Spatial Data
 
 - LatticeKrig: Multiresolution Kriging Based on Markov Random Fields. Methods for the interpolation of large spatial datasets.
@@ -105,17 +85,6 @@ Spatially Autoregressive Models 1
 
 - [Displaying time series, spatial and space-time data with R](https://oscarperpinan.github.io/)
   
-广义可加混合效应模型 Generalized additive (mixed) models
-
-- Repo for tutorial/paper on mixed-effect GAMs (General Additive Models with Mixed-Effect Smooths) <https://github.com/noamross/mixed-effect-gams>
-
-- gamm4: Generalized Additive Mixed Models using 'mgcv' and 'lme4'
-
-Estimate generalized additive mixed models via a version of function gamm() from 'mgcv', using 'lme4' for estimation.
-
-- mgcv: Mixed GAM Computation Vehicle with Automatic Smoothness Estimation
-
-Generalized additive (mixed) models, some of their extensions and other generalized ridge regression with multiple smoothing parameter estimation by (Restricted) Marginal Likelihood, Generalized Cross Validation and similar. Includes a gam() function, a wide variety of smoothers, JAGS support and distributions beyond the exponential family.
 
 - CAST: 'caret' Applications for Spatial-Temporal Models
 
@@ -152,8 +121,9 @@ Use RcppEigen to fit least trimmed squares regression models with an L1 penalty 
 Provides a complete environment for Bayesian inference using a variety of different samplers (see ?LaplacesDemon for an overview). The README describes the history of the package development process.
 
   
+
 https://www.rspatial.org/ 
-  
+
 https://edzer.github.io/sp/ 
 
 https://www.rspatial.org
