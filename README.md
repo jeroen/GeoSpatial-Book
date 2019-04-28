@@ -8,7 +8,7 @@
 
 > 书籍
 
-- [Intro to GIS and Spatial Analysis](https://mgimond.github.io/Spatial/index.html)  Manuel Gimond https://github.com/mgimond/Spatial
+- Intro to GIS and Spatial Analysis https://mgimond.github.io/Spatial  Manuel Gimond https://github.com/mgimond/Spatial
 - 时空统计与 R 语言 [Spatio-Temporal Statistics with R](https://spacetimewithr.org/)
 - 空间点模式：理论与应用 [Spatial Point Patterns: Methodology and Applications with R](https://spatstat.org)
 - 空间微观模拟与R语言 [Spatial Microsimulation with R](https://spatial-microsim-book.robinlovelace.net/) 
@@ -84,51 +84,35 @@ Spatially Autoregressive Models 1
 - <https://rpubs.com/corey_sparks/246342>
 
 - [Displaying time series, spatial and space-time data with R](https://oscarperpinan.github.io/)
-  
 
-- CAST: 'caret' Applications for Spatial-Temporal Models
+- CAST: 'caret' Applications for Spatial-Temporal Models https://github.com/environmentalinformatics-marburg/CAST
+https://cran.r-project.org/web/packages/CAST/vignettes/CAST-intro.html
 
 Supporting functionality to run 'caret' with spatial or spatial-temporal data. 'caret' is a frequently used package for model training and prediction using machine learning. This package includes functions to improve spatial-temporal modelling tasks using 'caret'. It prepares data for Leave-Location-Out and Leave-Time-Out cross-validation which are target-oriented validation strategies for spatial-temporal models. To decrease overfitting and improve model performances, the package implements a forward feature selection that selects suitable predictor variables in view to their contribution to the target-oriented performance.
 
-https://github.com/environmentalinformatics-marburg/CAST
-https://cran.r-project.org/web/packages/CAST/vignettes/CAST-intro.html
 
-- spaMM: Mixed-Effect Models, Particularly Spatial Models
+- spaMM: Mixed-Effect Models, Particularly Spatial Models https://kimura.univ-montp2.fr/~rousset/spaMM.htm
 
-https://kimura.univ-montp2.fr/~rousset/spaMM.htm
-
-Inference based on mixed-effect models, including generalized linear mixed models with spatial correlations and models with non-Gaussian random effects (e.g., Beta). Variation in residual variance (heteroscedasticity) can itself be represented by a generalized linear mixed model. Various approximations of likelihood or restricted likelihood are implemented, in particular h-likelihood (Lee and Nelder 2001 <doi:10.1093/biomet/88.4.987>) and Laplace approximation.
-
-https://mirrors.tuna.tsinghua.edu.cn/CRAN/web/packages/SolveRationalMatrixEquation/index.html
-
-解有理矩阵方程与高斯过程回归模型可能有关
+- 解有理矩阵方程与高斯过程回归模型可能有关 https://mirrors.tuna.tsinghua.edu.cn/CRAN/web/packages/SolveRationalMatrixEquation/index.html
 
 - FastGP: Efficiently Using Gaussian Processes with Rcpp and RcppEigen
-
-Contains Rcpp and RcppEigen implementations of matrix operations useful for Gaussian process models, such as the inversion of a symmetric Toeplitz matrix, sampling from multivariate normal distributions, evaluation of the log-density of a multivariate normal vector, and Bayesian inference for latent variable Gaussian process models with elliptical slice sampling (Murray, Adams, and MacKay 2010).
+  Contains Rcpp and RcppEigen implementations of matrix operations useful for Gaussian process models, such as the inversion of a symmetric Toeplitz matrix, sampling from multivariate normal distributions, evaluation of the log-density of a multivariate normal vector, and Bayesian inference for latent variable Gaussian process models with elliptical slice sampling (Murray, Adams, and MacKay 2010).
 
 - sgeostat: An Object-Oriented Framework for Geostatistical Modeling in S+
-
-An Object-oriented Framework for Geostatistical Modeling in S+ containing functions for variogram estimation, variogram fitting and kriging as well as some plot functions. Written entirely in S, therefore works only for small data sets in acceptable computing time.
+  An Object-oriented Framework for Geostatistical Modeling in S+ containing functions for variogram estimation, variogram fitting and kriging as well as some plot functions. Written entirely in S, therefore works only for small data sets in acceptable computing time.
 
 - sparseLTSEigen: RcppEigen back end for sparse least trimmed squares regression
-
-Use RcppEigen to fit least trimmed squares regression models with an L1 penalty in order to obtain sparse models.
+  Use RcppEigen to fit least trimmed squares regression models with an L1 penalty in order to obtain sparse models.
 
 - hBayesDM: hierarchical Bayesian modeling of Decision-Making tasks 任务决策的贝叶斯分层建模 <https://github.com/CCS-Lab/hBayesDM> <https://rpubs.com/CCSL/hBayesDM> 
 
 - LaplacesDemon: Complete Environment for Bayesian Inference
-Provides a complete environment for Bayesian inference using a variety of different samplers (see ?LaplacesDemon for an overview). The README describes the history of the package development process.
+  Provides a complete environment for Bayesian inference using a variety of different samplers (see ?LaplacesDemon for an overview). The README describes the history of the package development process.
 
-  
-
-https://www.rspatial.org/ 
-
-https://edzer.github.io/sp/ 
-
-https://www.rspatial.org
-
-https://www.r-spatial.org
+- https://www.rspatial.org/ 
+- https://edzer.github.io/sp/ 
+- https://www.rspatial.org
+- https://www.r-spatial.org
 
 
 高精度世界地图 rworldxtra: Country boundaries at high resolution
