@@ -37,7 +37,7 @@ addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
-      - sourceline: ppa:opencpu/libgit2
+      - sourceline: ppa:jeroen/libgit2
       # sudo apt-get install software-properties-common gnupg gnupg-agent
       # sudo add-apt-repository -y ppa:opencpu/libgit2
     packages:
